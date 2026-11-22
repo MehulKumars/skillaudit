@@ -1,0 +1,17 @@
+{
+  "_comment": "Auditor-controlled suppressions. Glob patterns for rule and path. Pin with sha256 so the suppression lapses if the file changes. max_severity stops a suppression from hiding anything worse than expected.",
+  "suppress": [
+    {
+      "rule": "EXEC-PY-SUBPROCESS",
+      "path": "scripts/*.py",
+      "reason": "Converter calls LibreOffice via subprocess - reviewed 2026-11-22"
+    },
+    {
+      "rule": "PERSIST-LIBRARY-PRELOAD",
+      "path": "scripts/office/soffice.py",
+      "sha256": "replace-with-the-sha256-from-report.json",
+      "max_severity": "low",
+      "reason": "LD_PRELOAD sandbox shim, reviewed"
+    }
+  ]
+}

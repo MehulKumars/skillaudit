@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skillaudit"
+version = "1.0.0"
+description = "Offline, LLM-free static security auditor for AI-agent skills"
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+skillaudit = "skillaudit.cli:main"
+
+[tool.setuptools]
+packages = ["skillaudit"]

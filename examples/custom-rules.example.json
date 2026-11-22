@@ -1,0 +1,25 @@
+{
+  "_comment": "Extra regex rules. flags: any of i (ignore case), m (multiline), s (dotall). kinds limits file types (e.g. python, javascript, shell, markdown, json). capabilities feed the correlation engine (e.g. network-send, read-secrets, execute, download, persist).",
+  "rules": [
+    {
+      "id": "CUSTOM-INTERNAL-HOST",
+      "title": "References our internal network",
+      "severity": "medium",
+      "category": "network",
+      "pattern": "\\b[a-z0-9-]+\\.corp\\.example\\.com\\b",
+      "flags": "i",
+      "capabilities": ["network"],
+      "description": "Skills from outside the company should never know internal hostnames."
+    },
+    {
+      "id": "CUSTOM-PROD-DB",
+      "title": "Touches the production database",
+      "severity": "high",
+      "category": "credential-access",
+      "pattern": "prod-db-[0-9]+|PROD_DATABASE_URL",
+      "flags": "",
+      "kinds": ["python", "javascript", "shell", "markdown", "json", "yaml"],
+      "capabilities": ["read-secrets"]
+    }
+  ]
+}
