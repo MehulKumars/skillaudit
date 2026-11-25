@@ -15,12 +15,13 @@ sys.path.insert(0, ROOT)
 sys.path.insert(0, os.path.join(ROOT, "tests"))
 
 import fixtures  # noqa: E402
-from skillaudit import report_data, report_html, report_md  # noqa: E402
+from skillaudit import report_data, report_html, report_md, structure  # noqa: E402
 from skillaudit.decoders import find_encoded  # noqa: E402
 from skillaudit.model import sev_rank  # noqa: E402
 from skillaudit.sanitize import fence, visible  # noqa: E402
 from skillaudit.scanner import ScanOptions, Scanner, discover_units  # noqa: E402
 from skillaudit.unicode_checks import decode_zero_width_binary  # noqa: E402
+from skillaudit.walker import Entry  # noqa: E402
 
 RLO = chr(0x202E)
 
@@ -30,8 +31,12 @@ class FixtureTests(unittest.TestCase):
     def setUpClass(cls):
         cls.tmp = tempfile.mkdtemp(prefix="skillaudit-test-")
         cls.fx = fixtures.build_all(os.path.join(cls.tmp, "skills"))
+        cls.missing = fixtures.missing_samples(os.path.join(cls.tmp, "skills"))
         cls.scanner = Scanner(ScanOptions())
         cls.cache = {}
+
+    def on_disk(self, relpath):
+        return not any(m[0] == relpath for m in self.missing)
 
     @classmethod
     def tearDownClass(cls):
@@ -53,6 +58,15 @@ class FixtureTests(unittest.TestCase):
     def assertDetects(self, res, expected, min_sev="low"):
         missing = set(expected) - self.ids(res, min_sev)
         self.assertFalse(missing, "missing detections: %s\nfound: %s" % (sorted(missing), sorted(self.ids(res))))
+
+    # ------------------------------------------------------------------ fixture completeness
+    def test_fixture_samples_on_disk(self):
+        """Lists samples that are not on disk, so no test silently scans without them."""
+        vanished = [m for m in self.missing if m[2] == "vanished"]
+        self.assertFalse(vanished, "fixture files disappeared after they were written: %s" % vanished)
+        omitted = [m for m in self.missing if m[2] == "omitted"]
+        if omitted:
+            self.skipTest("samples not on disk: " + "; ".join("%s (%s)" % (p, why) for p, why, _ in omitted))
 
     # ------------------------------------------------------------------ benign control
     def test_benign_skill_is_clean(self):
@@ -147,10 +161,14 @@ class FixtureTests(unittest.TestCase):
         self.assertEqual(res.verdict, "CRITICAL")
         expected = {"BIN-NATIVE-EXECUTABLE", "FS-EXTENSION-MISMATCH", "BIN-APPENDED-DATA", "BIN-POLYGLOT",
                     "BIN-IMAGE-METADATA-TEXT", "BIN-PICKLE-CODE-EXEC", "ARC-PATH-TRAVERSAL", "ARC-ENCRYPTED-MEMBERS",
-                    "FS-LINK-TO-SENSITIVE", "FS-NAME-DOUBLE-EXTENSION", "FS-NAME-HIDDEN-CHARS", "SECRET-ANTHROPIC",
+                    "FS-LINK-TO-SENSITIVE", "FS-NAME-DOUBLE-EXTENSION", "SECRET-ANTHROPIC",
                     "SECRET-AWS-KEY-ID", "SECRET-DOTENV-FILE", "IOC-KNOWN-BAD-IP"}
+        if self.on_disk("theme-pack/" + fixtures.RTLO_NAME.encode("ascii", "backslashreplace").decode()):
+            expected.add("FS-NAME-HIDDEN-CHARS")  # on Windows it is tested in memory instead (see below)
         if sys.platform == "win32":
-            expected |= {"FS-ALTERNATE-DATA-STREAM", "FS-WINDOWS-HIDDEN-ATTRIBUTE"}
+            expected.add("FS-WINDOWS-HIDDEN-ATTRIBUTE")
+            if self.on_disk("theme-pack/assets/readme.txt:hidden.ps1"):
+                expected.add("FS-ALTERNATE-DATA-STREAM")
         self.assertDetects(res, expected)
         appended = [f for f in res.findings if "appended-data" in f.path and f.rule_id == "EXEC-PIPE-TO-SHELL"]
         self.assertTrue(appended, "zip appended to a PNG must be opened and scanned")
@@ -239,6 +257,20 @@ class FixtureTests(unittest.TestCase):
 
 
 class UnitTests(unittest.TestCase):
+    def test_hidden_char_file_name_in_memory(self):
+        """FS-NAME-HIDDEN-CHARS on the right-to-left-override name, without creating the file.
+
+        Windows Security deletes a file with this name as soon as it is written, so the name is checked as an
+        in-memory entry, exactly as the scanner sees archive members.
+        """
+        entry = Entry(relpath="theme-pack/" + fixtures.RTLO_NAME, size=11, data=b"rtlo trick\n")
+        found = {f.rule_id: f for f in structure.check_entry(entry, "")}
+        self.assertIn("FS-NAME-HIDDEN-CHARS", found)
+        self.assertEqual(found["FS-NAME-HIDDEN-CHARS"].severity, "critical")
+        self.assertIn("[U+202E RLO]", found["FS-NAME-HIDDEN-CHARS"].path, "the name must be shown with a visible marker")
+        harmless = Entry(relpath="theme-pack/report.pdf", size=11, data=b"plain name\n")
+        self.assertNotIn("FS-NAME-HIDDEN-CHARS", {f.rule_id for f in structure.check_entry(harmless, "")})
+
     def test_visible_markers(self):
         self.assertEqual(visible("a" + RLO + "b"), "a[U+202E RLO]b")
         self.assertIn("tag", visible("x" + "".join(chr(0xE0041) for _ in range(5))))
