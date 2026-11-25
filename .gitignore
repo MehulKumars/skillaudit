@@ -6,3 +6,7 @@ build/
 skillaudit-reports/
 demo-skills/
 .venv/
+
+# benchmark: local sample list (paths) and private detailed results
+benchmark/samples.local.json
+benchmark/local/

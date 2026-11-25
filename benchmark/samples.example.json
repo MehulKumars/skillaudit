@@ -1,0 +1,23 @@
+{
+  "_comment": [
+    "Copy to benchmark/samples.local.json (git-ignored) and point it at folders on your machine.",
+    "Paths may use ~ and environment variables such as %APPDATA% or $HOME.",
+    "named: public samples reported by name in committed results; all of them are used for tuning.",
+    "needs_human: samples whose status is undecided; reported separately, never counted as legitimate or malicious.",
+    "local: everything else on the machine; reported only as group totals in committed results, and split",
+    "       deterministically into a tuning half and a held-back half that is not looked at while tuning."
+  ],
+  "named": [
+    {"id": "npm:@playwright/mcp", "path": "~/path/to/node_modules/@playwright/mcp", "npm_version": true},
+    {"each_subdir": "~/path/to/project/.claude/skills", "prefix": "skill:"}
+  ],
+  "needs_human": [
+    {"id": "skill:example", "path": "~/path/to/undecided-skill"}
+  ],
+  "local": [
+    {"group": "installed-skills", "discover": true},
+    {"group": "node-packages", "each_package": "~/path/to/project/node_modules"},
+    {"group": "python-packages", "id": "pip", "path": "~/path/to/site-packages/pip"}
+  ],
+  "size_check_host": "npm:@playwright/mcp"
+}
