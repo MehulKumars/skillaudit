@@ -1,0 +1,6171 @@
+{
+ "schema": "skillaudit-benchmark/1",
+ "tool": "skillaudit 1.0.0",
+ "scanner_sha256": "2c076ce7ff5df153764a6ac1d09f618395b15e7d67793601f5f86c75b5cba18f",
+ "date": "2026-11-25T23:22:31+00:00",
+ "limit": "The malicious samples and the rules were written by the same author, so these numbers show that known techniques are covered. They are not a real-world detection rate. The legitimate samples are what was installed on one developer machine, so they over-represent browser automation, design skills and front-end packages.",
+ "missing_samples": [
+  {
+   "id": "demo:theme-pack/report\\u202efdp.exe",
+   "reason": "not written on Windows: Windows Security deletes it on sight; FS-NAME-HIDDEN-CHARS is tested in memory instead"
+  }
+ ],
+ "errors": [],
+ "recompute_mismatches": 0,
+ "legitimate": {
+  "named": [
+   {
+    "id": "npm:playwright@1.66.0-alpha-2026-11-18",
+    "files": 60,
+    "verdict": "CRITICAL",
+    "score": 100,
+    "findings": {
+     "critical": 7,
+     "high": 5,
+     "medium": 25,
+     "low": 47,
+     "info": 9
+    },
+    "critical_rules": [
+     "CHAIN-INSTALL-LURE",
+     "CRED-BROWSER"
+    ],
+    "units": [
+     {
+      "unit": "playwright",
+      "verdict": "CRITICAL",
+      "score": 100,
+      "files": 60
+     }
+    ],
+    "critical_high_labels": {
+     "critical / wrong match": 7,
+     "high / real but normal here": 5
+    }
+   },
+   {
+    "id": "npm:@playwright/mcp@0.0.86",
+    "files": 7,
+    "verdict": "MEDIUM",
+    "score": 30,
+    "findings": {
+     "critical": 0,
+     "high": 0,
+     "medium": 4,
+     "low": 16,
+     "info": 3
+    },
+    "critical_rules": [],
+    "units": [
+     {
+      "unit": "mcp",
+      "verdict": "MEDIUM",
+      "score": 30,
+      "files": 7
+     }
+    ],
+    "critical_high_labels": {}
+   },
+   {
+    "id": "skill:accessibility",
+    "files": 3,
+    "verdict": "MEDIUM",
+    "score": 20,
+    "findings": {
+     "critical": 0,
+     "high": 0,
+     "medium": 2,
+     "low": 2,
+     "info": 1
+    },
+    "critical_rules": [],
+    "units": [
+     {
+      "unit": "accessibility",
+      "verdict": "MEDIUM",
+      "score": 20,
+      "files": 3
+     }
+    ],
+    "critical_high_labels": {}
+   },
+   {
+    "id": "skill:emil-design-eng",
+    "files": 1,
+    "verdict": "CLEAN",
+    "score": 0,
+    "findings": {
+     "critical": 0,
+     "high": 0,
+     "medium": 0,
+     "low": 0,
+     "info": 1
+    },
+    "critical_rules": [],
+    "units": [
+     {
+      "unit": "emil-design-eng",
+      "verdict": "CLEAN",
+      "score": 0,
+      "files": 1
+     }
+    ],
+    "critical_high_labels": {}
+   },
+   {
+    "id": "skill:choreograph",
+    "files": 2,
+    "verdict": "MEDIUM",
+    "score": 5,
+    "findings": {
+     "critical": 0,
+     "high": 0,
+     "medium": 1,
+     "low": 0,
+     "info": 0
+    },
+    "critical_rules": [],
+    "units": [
+     {
+      "unit": "choreograph",
+      "verdict": "MEDIUM",
+      "score": 5,
+      "files": 2
+     }
+    ],
+    "critical_high_labels": {}
+   },
+   {
+    "id": "skill:performance",
+    "files": 3,
+    "verdict": "MEDIUM",
+    "score": 13,
+    "findings": {
+     "critical": 0,
+     "high": 0,
+     "medium": 1,
+     "low": 2,
+     "info": 0
+    },
+    "critical_rules": [],
+    "units": [
+     {
+      "unit": "performance",
+      "verdict": "MEDIUM",
+      "score": 13,
+      "files": 3
+     }
+    ],
+    "critical_high_labels": {}
+   },
+   {
+    "id": "skill:core-web-vitals",
+    "files": 4,
+    "verdict": "MEDIUM",
+    "score": 13,
+    "findings": {
+     "critical": 0,
+     "high": 0,
+     "medium": 3,
+     "low": 2,
+     "info": 0
+    },
+    "critical_rules": [],
+    "units": [
+     {
+      "unit": "core-web-vitals",
+      "verdict": "MEDIUM",
+      "score": 13,
+      "files": 4
+     }
+    ],
+    "critical_high_labels": {}
+   },
+   {
+    "id": "skill:frontend-design",
+    "files": 2,
+    "verdict": "CLEAN",
+    "score": 0,
+    "findings": {
+     "critical": 0,
+     "high": 0,
+     "medium": 0,
+     "low": 0,
+     "info": 0
+    },
+    "critical_rules": [],
+    "units": [
+     {
+      "unit": "frontend-design",
+      "verdict": "CLEAN",
+      "score": 0,
+      "files": 2
+     }
+    ],
+    "critical_high_labels": {}
+   },
+   {
+    "id": "skill:animate",
+    "files": 2,
+    "verdict": "CLEAN",
+    "score": 0,
+    "findings": {
+     "critical": 0,
+     "high": 0,
+     "medium": 0,
+     "low": 0,
+     "info": 0
+    },
+    "critical_rules": [],
+    "units": [
+     {
+      "unit": "animate",
+      "verdict": "CLEAN",
+      "score": 0,
+      "files": 2
+     }
+    ],
+    "critical_high_labels": {}
+   },
+   {
+    "id": "skill:gsap-plugins",
+    "files": 1,
+    "verdict": "LOW",
+    "score": 2,
+    "findings": {
+     "critical": 0,
+     "high": 0,
+     "medium": 0,
+     "low": 1,
+     "info": 1
+    },
+    "critical_rules": [],
+    "units": [
+     {
+      "unit": "gsap-plugins",
+      "verdict": "LOW",
+      "score": 2,
+      "files": 1
+     }
+    ],
+    "critical_high_labels": {}
+   },
+   {
+    "id": "skill:best-practices",
+    "files": 2,
+    "verdict": "MEDIUM",
+    "score": 18,
+    "findings": {
+     "critical": 0,
+     "high": 0,
+     "medium": 2,
+     "low": 1,
+     "info": 0
+    },
+    "critical_rules": [],
+    "units": [
+     {
+      "unit": "best-practices",
+      "verdict": "MEDIUM",
+      "score": 18,
+      "files": 2
+     }
+    ],
+    "critical_high_labels": {}
+   },
+   {
+    "id": "skill:review-animations",
+    "files": 2,
+    "verdict": "CLEAN",
+    "score": 0,
+    "findings": {
+     "critical": 0,
+     "high": 0,
+     "medium": 0,
+     "low": 0,
+     "info": 0
+    },
+    "critical_rules": [],
+    "units": [
+     {
+      "unit": "review-animations",
+      "verdict": "CLEAN",
+      "score": 0,
+      "files": 2
+     }
+    ],
+    "critical_high_labels": {}
+   },
+   {
+    "id": "skill:gsap-scrolltrigger",
+    "files": 1,
+    "verdict": "CLEAN",
+    "score": 0,
+    "findings": {
+     "critical": 0,
+     "high": 0,
+     "medium": 0,
+     "low": 0,
+     "info": 0
+    },
+    "critical_rules": [],
+    "units": [
+     {
+      "unit": "gsap-scrolltrigger",
+      "verdict": "CLEAN",
+      "score": 0,
+      "files": 1
+     }
+    ],
+    "critical_high_labels": {}
+   },
+   {
+    "id": "skill:seo",
+    "files": 2,
+    "verdict": "MEDIUM",
+    "score": 17,
+    "findings": {
+     "critical": 0,
+     "high": 0,
+     "medium": 3,
+     "low": 0,
+     "info": 0
+    },
+    "critical_rules": [],
+    "units": [
+     {
+      "unit": "seo",
+      "verdict": "MEDIUM",
+      "score": 17,
+      "files": 2
+     }
+    ],
+    "critical_high_labels": {}
+   },
+   {
+    "id": "skill:mobile-native",
+    "files": 1,
+    "verdict": "CLEAN",
+    "score": 0,
+    "findings": {
+     "critical": 0,
+     "high": 0,
+     "medium": 0,
+     "low": 0,
+     "info": 0
+    },
+    "critical_rules": [],
+    "units": [
+     {
+      "unit": "mobile-native",
+      "verdict": "CLEAN",
+      "score": 0,
+      "files": 1
+     }
+    ],
+    "critical_high_labels": {}
+   },
+   {
+    "id": "skill:gsap-core",
+    "files": 1,
+    "verdict": "CLEAN",
+    "score": 0,
+    "findings": {
+     "critical": 0,
+     "high": 0,
+     "medium": 0,
+     "low": 0,
+     "info": 0
+    },
+    "critical_rules": [],
+    "units": [
+     {
+      "unit": "gsap-core",
+      "verdict": "CLEAN",
+      "score": 0,
+      "files": 1
+     }
+    ],
+    "critical_high_labels": {}
+   },
+   {
+    "id": "skill:web-quality-audit",
+    "files": 2,
+    "verdict": "MEDIUM",
+    "score": 10,
+    "findings": {
+     "critical": 0,
+     "high": 0,
+     "medium": 6,
+     "low": 0,
+     "info": 1
+    },
+    "critical_rules": [],
+    "units": [
+     {
+      "unit": "web-quality-audit",
+      "verdict": "MEDIUM",
+      "score": 10,
+      "files": 2
+     }
+    ],
+    "critical_high_labels": {}
+   },
+   {
+    "id": "skill:animation-performance",
+    "files": 1,
+    "verdict": "CLEAN",
+    "score": 0,
+    "findings": {
+     "critical": 0,
+     "high": 0,
+     "medium": 0,
+     "low": 0,
+     "info": 0
+    },
+    "critical_rules": [],
+    "units": [
+     {
+      "unit": "animation-performance",
+      "verdict": "CLEAN",
+      "score": 0,
+      "files": 1
+     }
+    ],
+    "critical_high_labels": {}
+   },
+   {
+    "id": "skill:gsap-utils",
+    "files": 1,
+    "verdict": "CLEAN",
+    "score": 0,
+    "findings": {
+     "critical": 0,
+     "high": 0,
+     "medium": 0,
+     "low": 0,
+     "info": 0
+    },
+    "critical_rules": [],
+    "units": [
+     {
+      "unit": "gsap-utils",
+      "verdict": "CLEAN",
+      "score": 0,
+      "files": 1
+     }
+    ],
+    "critical_high_labels": {}
+   },
+   {
+    "id": "skill:gsap-timeline",
+    "files": 1,
+    "verdict": "CLEAN",
+    "score": 0,
+    "findings": {
+     "critical": 0,
+     "high": 0,
+     "medium": 0,
+     "low": 0,
+     "info": 0
+    },
+    "critical_rules": [],
+    "units": [
+     {
+      "unit": "gsap-timeline",
+      "verdict": "CLEAN",
+      "score": 0,
+      "files": 1
+     }
+    ],
+    "critical_high_labels": {}
+   },
+   {
+    "id": "skill:gsap-performance",
+    "files": 1,
+    "verdict": "CLEAN",
+    "score": 0,
+    "findings": {
+     "critical": 0,
+     "high": 0,
+     "medium": 0,
+     "low": 0,
+     "info": 0
+    },
+    "critical_rules": [],
+    "units": [
+     {
+      "unit": "gsap-performance",
+      "verdict": "CLEAN",
+      "score": 0,
+      "files": 1
+     }
+    ],
+    "critical_high_labels": {}
+   },
+   {
+    "id": "demo:csv-formatter",
+    "files": 3,
+    "verdict": "CLEAN",
+    "score": 0,
+    "findings": {
+     "critical": 0,
+     "high": 0,
+     "medium": 0,
+     "low": 0,
+     "info": 0
+    },
+    "critical_rules": [],
+    "units": [
+     {
+      "unit": "csv-formatter",
+      "verdict": "CLEAN",
+      "score": 0,
+      "files": 3
+     }
+    ],
+    "critical_high_labels": {}
+   },
+   {
+    "id": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+    "files": 116,
+    "verdict": "CRITICAL",
+    "score": 100,
+    "findings": {
+     "critical": 38,
+     "high": 24,
+     "medium": 61,
+     "low": 57,
+     "info": 55
+    },
+    "critical_rules": [
+     "CRED-BROWSER",
+     "EXEC-JS-REMOTE-EXEC",
+     "OBF-DECODE-EXEC"
+    ],
+    "units": [
+     {
+      "unit": "lib/tools/skills/playwright-cli",
+      "verdict": "MEDIUM",
+      "score": 23,
+      "files": 11
+     },
+     {
+      "unit": "lib/tools/skills/playwright-component-testing",
+      "verdict": "LOW",
+      "score": 4,
+      "files": 6
+     },
+     {
+      "unit": "lib/tools/skills/playwright-trace",
+      "verdict": "MEDIUM",
+      "score": 10,
+      "files": 1
+     },
+     {
+      "unit": "playwright-core (files outside skills)",
+      "verdict": "CRITICAL",
+      "score": 100,
+      "files": 98
+     }
+    ],
+    "critical_high_labels": {
+     "critical / wrong match": 38,
+     "high / real but normal here": 20,
+     "high / wrong match": 4
+    }
+   },
+   {
+    "id": "npm:chrome-devtools-mcp@1.13.0",
+    "files": 388,
+    "verdict": "CRITICAL",
+    "score": 100,
+    "findings": {
+     "critical": 15,
+     "high": 19,
+     "medium": 61,
+     "low": 86,
+     "info": 17
+    },
+    "critical_rules": [
+     "CHAIN-CREDENTIAL-EXFILTRATION",
+     "CRED-BROWSER",
+     "EXEC-JS-REMOTE-EXEC"
+    ],
+    "units": [
+     {
+      "unit": "skills/a11y-debugging",
+      "verdict": "CLEAN",
+      "score": 0,
+      "files": 2
+     },
+     {
+      "unit": "skills/chrome-devtools",
+      "verdict": "LOW",
+      "score": 4,
+      "files": 1
+     },
+     {
+      "unit": "skills/chrome-devtools-cli",
+      "verdict": "LOW",
+      "score": 2,
+      "files": 2
+     },
+     {
+      "unit": "skills/cookie-debugging",
+      "verdict": "CLEAN",
+      "score": 0,
+      "files": 1
+     },
+     {
+      "unit": "skills/debug-optimize-lcp",
+      "verdict": "CLEAN",
+      "score": 0,
+      "files": 5
+     },
+     {
+      "unit": "skills/memory-leak-debugging",
+      "verdict": "CLEAN",
+      "score": 0,
+      "files": 2
+     },
+     {
+      "unit": "skills/troubleshooting",
+      "verdict": "LOW",
+      "score": 2,
+      "files": 1
+     },
+     {
+      "unit": "chrome-devtools-mcp (files outside skills)",
+      "verdict": "CRITICAL",
+      "score": 100,
+      "files": 374
+     }
+    ],
+    "critical_high_labels": {
+     "critical / wrong match": 15,
+     "high / real but normal here": 10,
+     "high / wrong match": 9
+    }
+   }
+  ],
+  "groups": [
+   {
+    "group": "installed-skills",
+    "split": "holdout",
+    "samples": 40,
+    "files": 410,
+    "verdicts": {
+     "LOW": 14,
+     "MEDIUM": 4,
+     "CLEAN": 21,
+     "HIGH": 1
+    }
+   },
+   {
+    "group": "installed-skills",
+    "split": "tune",
+    "samples": 56,
+    "files": 334,
+    "verdicts": {
+     "LOW": 16,
+     "CLEAN": 26,
+     "MEDIUM": 12,
+     "HIGH": 2
+    }
+   },
+   {
+    "group": "named",
+    "split": "tune",
+    "samples": 24,
+    "files": 607,
+    "verdicts": {
+     "CRITICAL": 3,
+     "MEDIUM": 8,
+     "CLEAN": 12,
+     "LOW": 1
+    }
+   },
+   {
+    "group": "node-packages",
+    "split": "holdout",
+    "samples": 99,
+    "files": 5046,
+    "verdicts": {
+     "HIGH": 17,
+     "MEDIUM": 16,
+     "CRITICAL": 10,
+     "CLEAN": 22,
+     "LOW": 34
+    }
+   },
+   {
+    "group": "node-packages",
+    "split": "tune",
+    "samples": 86,
+    "files": 8854,
+    "verdicts": {
+     "HIGH": 17,
+     "CRITICAL": 4,
+     "CLEAN": 29,
+     "MEDIUM": 13,
+     "LOW": 23
+    }
+   },
+   {
+    "group": "python-packages",
+    "split": "holdout",
+    "samples": 1,
+    "files": 858,
+    "verdicts": {
+     "HIGH": 1
+    }
+   }
+  ]
+ },
+ "needs_human": [
+  {
+   "id": "skill:impeccable",
+   "files": 63,
+   "verdict": "CRITICAL",
+   "score": 95,
+   "findings": {
+    "critical": 1,
+    "high": 3,
+    "medium": 8,
+    "low": 22,
+    "info": 44
+   },
+   "critical_rules": [
+    "OBF-DECODE-EXEC"
+   ]
+  }
+ ],
+ "malicious": [
+  {
+   "id": "demo:notes-organizer",
+   "expected": "CRITICAL",
+   "verdict": "CRITICAL",
+   "score": 100,
+   "caught": true,
+   "without_known_bad_lists": [
+    "CRITICAL",
+    100
+   ],
+   "load_bearing_rules": []
+  },
+  {
+   "id": "demo:markdown-helper",
+   "expected": "CRITICAL",
+   "verdict": "CRITICAL",
+   "score": 100,
+   "caught": true,
+   "without_known_bad_lists": [
+    "CRITICAL",
+    100
+   ],
+   "load_bearing_rules": []
+  },
+  {
+   "id": "demo:solana-wallet-tracker",
+   "expected": "CRITICAL",
+   "verdict": "CRITICAL",
+   "score": 100,
+   "caught": true,
+   "without_known_bad_lists": [
+    "CRITICAL",
+    100
+   ],
+   "load_bearing_rules": []
+  },
+  {
+   "id": "demo:productivity-booster",
+   "expected": "CRITICAL",
+   "verdict": "CRITICAL",
+   "score": 100,
+   "caught": true,
+   "without_known_bad_lists": [
+    "CRITICAL",
+    100
+   ],
+   "load_bearing_rules": []
+  },
+  {
+   "id": "demo:code-reviewer",
+   "expected": "CRITICAL",
+   "verdict": "CRITICAL",
+   "score": 97,
+   "caught": true,
+   "without_known_bad_lists": [
+    "CRITICAL",
+    97
+   ],
+   "load_bearing_rules": []
+  },
+  {
+   "id": "demo:pdf-merger",
+   "expected": "HIGH",
+   "verdict": "HIGH",
+   "score": 47,
+   "caught": true,
+   "without_known_bad_lists": [
+    "HIGH",
+    47
+   ],
+   "load_bearing_rules": []
+  },
+  {
+   "id": "demo:packaged.skill",
+   "expected": "CRITICAL",
+   "verdict": "CRITICAL",
+   "score": 100,
+   "caught": true,
+   "without_known_bad_lists": [
+    "CRITICAL",
+    100
+   ],
+   "load_bearing_rules": []
+  },
+  {
+   "id": "demo:image-resizer",
+   "expected": "CRITICAL",
+   "verdict": "CRITICAL",
+   "score": 100,
+   "caught": true,
+   "without_known_bad_lists": [
+    "CRITICAL",
+    100
+   ],
+   "load_bearing_rules": []
+  },
+  {
+   "id": "demo:calculator-mcp",
+   "expected": "CRITICAL",
+   "verdict": "CRITICAL",
+   "score": 94,
+   "caught": true,
+   "without_known_bad_lists": [
+    "HIGH",
+    84
+   ],
+   "load_bearing_rules": [
+    "IOC-KNOWN-BAD-PACKAGE"
+   ]
+  },
+  {
+   "id": "demo:theme-pack",
+   "expected": "CRITICAL",
+   "verdict": "CRITICAL",
+   "score": 100,
+   "caught": true,
+   "without_known_bad_lists": [
+    "CRITICAL",
+    100
+   ],
+   "load_bearing_rules": []
+  }
+ ],
+ "size_check": [
+  {
+   "id": "size:npm:@playwright/mcp@0.0.86 x16",
+   "files": 112,
+   "verdict": "HIGH",
+   "score": 100,
+   "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 64,
+    "low": 256,
+    "info": 33
+   }
+  },
+  {
+   "id": "size:demo:code-reviewer + 15 copies of npm:@playwright/mcp@0.0.86",
+   "files": 107,
+   "verdict": "CRITICAL",
+   "score": 100,
+   "findings": {
+    "critical": 2,
+    "high": 5,
+    "medium": 62,
+    "low": 242,
+    "info": 30
+   }
+  },
+  {
+   "id": "size:npm:@playwright/mcp@0.0.86 x4",
+   "files": 28,
+   "verdict": "HIGH",
+   "score": 76,
+   "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 16,
+    "low": 64,
+    "info": 9
+   }
+  },
+  {
+   "id": "size:demo:code-reviewer + 3 copies of npm:@playwright/mcp@0.0.86",
+   "files": 23,
+   "verdict": "CRITICAL",
+   "score": 99,
+   "findings": {
+    "critical": 2,
+    "high": 5,
+    "medium": 14,
+    "low": 50,
+    "info": 6
+   }
+  },
+  {
+   "id": "size:npm:@playwright/mcp@0.0.86 x1",
+   "files": 7,
+   "verdict": "MEDIUM",
+   "score": 30,
+   "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 4,
+    "low": 16,
+    "info": 3
+   }
+  },
+  {
+   "id": "size:demo:code-reviewer + 0 copies of npm:@playwright/mcp@0.0.86",
+   "files": 2,
+   "verdict": "CRITICAL",
+   "score": 97,
+   "findings": {
+    "critical": 2,
+    "high": 5,
+    "medium": 2,
+    "low": 2,
+    "info": 0
+   }
+  }
+ ],
+ "rules": [
+  {
+   "rule": "OBF-EMBEDDED-BINARY",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 5,
+   "legit_hits": 17,
+   "legit_by_severity": {
+    "critical": 4,
+    "info": 13
+   },
+   "where": {
+    "own code": 14,
+    "bundled / third-party": 3
+   },
+   "labels": {
+    "real but normal here": 4
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "credential-access",
+   "legit_samples": 4,
+   "legit_hits": 49,
+   "legit_by_severity": {
+    "critical": 49
+   },
+   "where": {
+    "bundled / third-party": 26,
+    "type definitions": 16,
+    "own code": 7
+   },
+   "labels": {
+    "wrong match": 49
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "pattern-tested"
+  },
+  {
+   "rule": "UNI-ZERO-WIDTH",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 4,
+   "legit_hits": 11,
+   "legit_by_severity": {
+    "medium": 5,
+    "low": 6
+   },
+   "where": {
+    "own code": 8,
+    "bundled / third-party": 3
+   },
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "EXEC-JS-REMOTE-EXEC",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "remote-exec",
+   "legit_samples": 3,
+   "legit_hits": 6,
+   "legit_by_severity": {
+    "critical": 6
+   },
+   "where": {
+    "bundled / third-party": 4,
+    "own code": 2
+   },
+   "labels": {
+    "wrong match": 6
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "pattern-tested"
+  },
+  {
+   "rule": "OBF-ENCODED-PAYLOAD",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 3,
+   "legit_hits": 6,
+   "legit_by_severity": {
+    "low": 6
+   },
+   "where": {
+    "own code": 3,
+    "bundled / third-party": 3
+   },
+   "labels": {},
+   "malicious_samples": 3,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "OBF-DECODE-EXEC",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "obfuscation",
+   "legit_samples": 2,
+   "legit_hits": 6,
+   "legit_by_severity": {
+    "critical": 6
+   },
+   "where": {
+    "bundled / third-party": 1,
+    "own code": 5
+   },
+   "labels": {
+    "wrong match": 6
+   },
+   "malicious_samples": 3,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "CHAIN-CREDENTIAL-EXFILTRATION",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "critical": 1
+   },
+   "where": {
+    "bundled / third-party": 1
+   },
+   "labels": {
+    "wrong match": 1
+   },
+   "malicious_samples": 2,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "CHAIN-INSTALL-LURE",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "critical": 1
+   },
+   "where": {
+    "whole package": 1
+   },
+   "labels": {
+    "wrong match": 1
+   },
+   "malicious_samples": 3,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "CRED-PASSWORD-MANAGERS",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "credential-access",
+   "legit_samples": 1,
+   "legit_hits": 28,
+   "legit_by_severity": {
+    "critical": 28
+   },
+   "where": {
+    "own code": 26,
+    "type definitions": 2
+   },
+   "labels": {
+    "wrong match": 28
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-PS-DOWNLOAD-IEX",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "remote-exec",
+   "legit_samples": 1,
+   "legit_hits": 2,
+   "legit_by_severity": {
+    "critical": 2
+   },
+   "where": {
+    "own code": 1,
+    "bundled / third-party": 1
+   },
+   "labels": {
+    "wrong match": 2
+   },
+   "malicious_samples": 2,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "EXEC-SUBSHELL-DOWNLOAD",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "remote-exec",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "high": 1
+   },
+   "where": {
+    "SKILL.md": 1
+   },
+   "labels": {
+    "real but normal here": 1
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "MINER-INDICATORS",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "cryptomining",
+   "legit_samples": 1,
+   "legit_hits": 21,
+   "legit_by_severity": {
+    "critical": 21
+   },
+   "where": {
+    "own code": 21
+   },
+   "labels": {
+    "wrong match": 21
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SHELL-MKFIFO",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "reverse-shell",
+   "legit_samples": 1,
+   "legit_hits": 2,
+   "legit_by_severity": {
+    "critical": 2
+   },
+   "where": {
+    "own code": 1,
+    "bundled / third-party": 1
+   },
+   "labels": {
+    "wrong match": 2
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "BIN-PDF-LAUNCH",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "BIN-PICKLE-CODE-EXEC",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "CHAIN-FILE-SWEEP-EXFILTRATION",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CHAIN-HIDDEN-INSTRUCTIONS",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 2,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "CHAIN-MEMORY-POISONING",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "CHAIN-SKILLJECT",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 3,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "CRED-AGENT-TOKENS",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "credential-access",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CRED-KEYCHAIN",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "credential-access",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CRED-MESSAGING-TOKENS",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "credential-access",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CRED-SEED-EXFIL",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "crypto-theft",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CRED-WALLETS",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "crypto-theft",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CRED-WINDOWS",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "credential-access",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CRYPTO-ADDRESS-SWAP",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "crypto-theft",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "DESTR-DISK",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "destructive",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "DESTR-FORK-BOMB",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "destructive",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "DESTR-INHIBIT-RECOVERY",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "destructive",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "DESTR-RM-ROOT",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "destructive",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "DESTR-WINDOWS-WIPE",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "destructive",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EVADE-AMSI-ETW",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "defense-evasion",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-LOLBIN-MSHTA",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "remote-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-LOLBIN-REGSVR32",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "remote-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-PIPE-TO-SHELL",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "remote-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 7,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "EXEC-PROCESS-SUBST",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "remote-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-PY-REMOTE-EXEC",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "remote-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "FS-LINK-TO-SENSITIVE",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "FS-NAME-HIDDEN-CHARS",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "pattern-tested"
+  },
+  {
+   "rule": "FS-NAME-HOMOGLYPH",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "IOC-KNOWN-BAD",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "IOC-KNOWN-BAD-HASH",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "IOC-KNOWN-BAD-IP",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "IOC-KNOWN-BAD-PACKAGE",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 1,
+   "status": "malicious example"
+  },
+  {
+   "rule": "IOC-KNOWN-BAD-SKILL-NAME",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 2,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "IOC-KNOWN-BAD-STRING",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 2,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "META-PREREQUISITE-LURE",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 2,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "META-YAML-TAGS",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "OBF-DECOMPRESS-EXEC",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "obfuscation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "PERSIST-ROGUE-MCP-DIR",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "known-ioc",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "PERSIST-SSH-AUTHKEYS",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "persistence",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "PRIV-SUDOERS",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "privilege-escalation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SHELL-DEV-TCP",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "reverse-shell",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SHELL-NETCAT-EXEC",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "reverse-shell",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SHELL-OPENSSL-TELNET",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "reverse-shell",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SHELL-POWERSHELL",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "reverse-shell",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SHELL-PYTHON",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "reverse-shell",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "SHELL-SCRIPTING-LANGS",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "reverse-shell",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SHELL-SOCAT",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "reverse-shell",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SOC-ARCHIVE-PASSWORD",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "social-engineering",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 2,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "SOC-FAKE-PASSWORD-DIALOG",
+   "severity": "critical",
+   "kind": "regex",
+   "category": "social-engineering",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "UNI-TAG-SMUGGLING",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "UNI-VARIATION-SELECTOR-SMUGGLING",
+   "severity": "critical",
+   "kind": "built-in",
+   "category": "",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "OBF-MINIFIED-CODE",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "obfuscation",
+   "legit_samples": 21,
+   "legit_hits": 124,
+   "legit_by_severity": {
+    "high": 92,
+    "medium": 32
+   },
+   "where": {
+    "bundled / third-party": 65,
+    "own code": 54,
+    "type definitions": 5
+   },
+   "labels": {
+    "real but normal here": 92
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SUPPLY-NPM-INSTALL-SCRIPT",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "supply-chain",
+   "legit_samples": 11,
+   "legit_hits": 11,
+   "legit_by_severity": {
+    "high": 11
+   },
+   "where": {
+    "own code": 11
+   },
+   "labels": {
+    "wrong match": 11
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CHAIN-DECODE-EXECUTE",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "correlation",
+   "legit_samples": 5,
+   "legit_hits": 17,
+   "legit_by_severity": {
+    "high": 13,
+    "medium": 4
+   },
+   "where": {
+    "own code": 11,
+    "bundled / third-party": 6
+   },
+   "labels": {
+    "real but normal here": 10,
+    "wrong match": 3
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "BIN-COMPILED-CODE",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "binary",
+   "legit_samples": 3,
+   "legit_hits": 3,
+   "legit_by_severity": {
+    "high": 3
+   },
+   "where": {
+    "own code": 3
+   },
+   "labels": {
+    "real but normal here": 3
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "BIN-NATIVE-EXECUTABLE",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "binary",
+   "legit_samples": 3,
+   "legit_hits": 3,
+   "legit_by_severity": {
+    "high": 3
+   },
+   "where": {
+    "own code": 2,
+    "bundled / third-party": 1
+   },
+   "labels": {
+    "real but normal here": 3
+   },
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "EXEC-DOWNLOAD-EXECUTABLE",
+   "severity": "high",
+   "kind": "regex",
+   "category": "remote-exec",
+   "legit_samples": 3,
+   "legit_hits": 6,
+   "legit_by_severity": {
+    "high": 5,
+    "medium": 1
+   },
+   "where": {
+    "SKILL.md": 1,
+    "own code": 4,
+    "bundled / third-party": 1
+   },
+   "labels": {
+    "real but normal here": 5
+   },
+   "malicious_samples": 2,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "HIDE-COMMENT-INSTRUCTIONS",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "hidden-content",
+   "legit_samples": 3,
+   "legit_hits": 3,
+   "legit_by_severity": {
+    "medium": 3
+   },
+   "where": {
+    "documentation": 3
+   },
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "INJ-IGNORE-INSTRUCTIONS",
+   "severity": "high",
+   "kind": "regex",
+   "category": "prompt-injection",
+   "legit_samples": 3,
+   "legit_hits": 3,
+   "legit_by_severity": {
+    "medium": 3
+   },
+   "where": {
+    "SKILL.md": 3
+   },
+   "labels": {},
+   "malicious_samples": 3,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "UNI-HOMOGLYPH-MIXED-SCRIPT",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "unicode",
+   "legit_samples": 3,
+   "legit_hits": 6,
+   "legit_by_severity": {
+    "high": 6
+   },
+   "where": {
+    "own code": 3,
+    "bundled / third-party": 3
+   },
+   "labels": {
+    "wrong match": 6
+   },
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "PERSIST-BROWSER-EXTENSION",
+   "severity": "high",
+   "kind": "regex",
+   "category": "persistence",
+   "legit_samples": 2,
+   "legit_hits": 2,
+   "legit_by_severity": {
+    "high": 2
+   },
+   "where": {
+    "type definitions": 1,
+    "bundled / third-party": 1
+   },
+   "labels": {
+    "real but normal here": 2
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "PERSIST-SHELL-RC-WRITE",
+   "severity": "high",
+   "kind": "regex",
+   "category": "persistence",
+   "legit_samples": 2,
+   "legit_hits": 5,
+   "legit_by_severity": {
+    "high": 5
+   },
+   "where": {
+    "own code": 1,
+    "bundled / third-party": 4
+   },
+   "labels": {
+    "real but normal here": 1,
+    "wrong match": 4
+   },
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "AGENT-CONFIG-WRITE",
+   "severity": "high",
+   "kind": "regex",
+   "category": "agent-tampering",
+   "legit_samples": 1,
+   "legit_hits": 2,
+   "legit_by_severity": {
+    "high": 2
+   },
+   "where": {
+    "own code": 2
+   },
+   "labels": {
+    "real but normal here": 2
+   },
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "CHAIN-CONCEALED-ACTION",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "correlation",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "high": 1
+   },
+   "where": {
+    "whole package": 1
+   },
+   "labels": {
+    "wrong match": 1
+   },
+   "malicious_samples": 5,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "CHAIN-DOWNLOAD-EXECUTE",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "correlation",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "high": 1
+   },
+   "where": {
+    "documentation": 1
+   },
+   "labels": {
+    "wrong match": 1
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CRED-CLOUD",
+   "severity": "high",
+   "kind": "regex",
+   "category": "credential-access",
+   "legit_samples": 1,
+   "legit_hits": 3,
+   "legit_by_severity": {
+    "high": 3
+   },
+   "where": {
+    "SKILL.md": 3
+   },
+   "labels": {
+    "wrong match": 3
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CRED-DEV-TOKENS",
+   "severity": "high",
+   "kind": "regex",
+   "category": "credential-access",
+   "legit_samples": 1,
+   "legit_hits": 4,
+   "legit_by_severity": {
+    "high": 4
+   },
+   "where": {
+    "SKILL.md": 4
+   },
+   "labels": {
+    "wrong match": 4
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CRED-PROC-ENVIRON",
+   "severity": "high",
+   "kind": "regex",
+   "category": "credential-access",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "high": 1
+   },
+   "where": {
+    "own code": 1
+   },
+   "labels": {
+    "wrong match": 1
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CRED-SSH",
+   "severity": "high",
+   "kind": "regex",
+   "category": "credential-access",
+   "legit_samples": 1,
+   "legit_hits": 2,
+   "legit_by_severity": {
+    "high": 2
+   },
+   "where": {
+    "SKILL.md": 2
+   },
+   "labels": {
+    "wrong match": 2
+   },
+   "malicious_samples": 4,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "EXEC-LOLBIN-RUNDLL32",
+   "severity": "high",
+   "kind": "regex",
+   "category": "remote-exec",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "high": 1
+   },
+   "where": {
+    "own code": 1
+   },
+   "labels": {
+    "real but normal here": 1
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-PS-IEX",
+   "severity": "high",
+   "kind": "regex",
+   "category": "dynamic-exec",
+   "legit_samples": 1,
+   "legit_hits": 2,
+   "legit_by_severity": {
+    "high": 2
+   },
+   "where": {
+    "own code": 1,
+    "bundled / third-party": 1
+   },
+   "labels": {
+    "wrong match": 2
+   },
+   "malicious_samples": 2,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "HIDE-INVISIBLE-HTML",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "hidden-content",
+   "legit_samples": 1,
+   "legit_hits": 2,
+   "legit_by_severity": {
+    "medium": 2
+   },
+   "where": {
+    "documentation": 2
+   },
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "INJ-CONCEAL-FROM-USER",
+   "severity": "high",
+   "kind": "regex",
+   "category": "concealment",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "high": 1
+   },
+   "where": {
+    "bundled / third-party": 1
+   },
+   "labels": {
+    "real but normal here": 1
+   },
+   "malicious_samples": 2,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "IOC-FILE-SHARE",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "remote-exec",
+   "legit_samples": 1,
+   "legit_hits": 12,
+   "legit_by_severity": {
+    "high": 12
+   },
+   "where": {
+    "own code": 12
+   },
+   "labels": {
+    "real but normal here": 12
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "IOC-NON-ASCII-HOST",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "unicode",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "high": 1
+   },
+   "where": {
+    "bundled / third-party": 1
+   },
+   "labels": {
+    "wrong match": 1
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "IOC-PASTE-SITE",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "remote-exec",
+   "legit_samples": 1,
+   "legit_hits": 3,
+   "legit_by_severity": {
+    "high": 3
+   },
+   "where": {
+    "own code": 3
+   },
+   "labels": {
+    "real but normal here": 3
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "META-RISKY-FIELD-HOOKS",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "excessive-agency",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "high": 1
+   },
+   "where": {
+    "SKILL.md": 1
+   },
+   "labels": {
+    "needs a human": 1
+   },
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "PERSIST-CRON",
+   "severity": "high",
+   "kind": "regex",
+   "category": "persistence",
+   "legit_samples": 1,
+   "legit_hits": 2,
+   "legit_by_severity": {
+    "high": 2
+   },
+   "where": {
+    "own code": 1,
+    "bundled / third-party": 1
+   },
+   "labels": {
+    "wrong match": 2
+   },
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "PERSIST-INTERPRETER-HOOK",
+   "severity": "high",
+   "kind": "regex",
+   "category": "persistence",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "high": 1
+   },
+   "where": {
+    "bundled / third-party": 1
+   },
+   "labels": {
+    "wrong match": 1
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SOC-ASK-FOR-PASSWORD",
+   "severity": "high",
+   "kind": "regex",
+   "category": "social-engineering",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "medium": 1
+   },
+   "where": {
+    "type definitions": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "UNI-ANSI-ESCAPE",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "unicode",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "high": 1
+   },
+   "where": {
+    "own code": 1
+   },
+   "labels": {
+    "real but normal here": 1
+   },
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "AGENT-API-REDIRECT",
+   "severity": "high",
+   "kind": "regex",
+   "category": "agent-tampering",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "AGENT-MEMORY-INSTRUCTION",
+   "severity": "high",
+   "kind": "regex",
+   "category": "agent-tampering",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "AGENT-PERMISSION-BYPASS",
+   "severity": "high",
+   "kind": "regex",
+   "category": "agent-tampering",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "AGENT-SPAWN-UNSAFE",
+   "severity": "high",
+   "kind": "regex",
+   "category": "agent-tampering",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "ARC-ENCRYPTED-MEMBERS",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "archive",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "ARC-PATH-TRAVERSAL",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "archive",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "BIN-APPENDED-DATA",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "hidden-content",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "BIN-POLYGLOT",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "obfuscation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "CAPABILITY-UNDECLARED-REMOTE-ACCESS",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "correlation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "CHAIN-PREAPPROVED-SHELL-DANGER",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "correlation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "CRED-FILE-SWEEP",
+   "severity": "high",
+   "kind": "regex",
+   "category": "recon",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CRED-GPG",
+   "severity": "high",
+   "kind": "regex",
+   "category": "credential-access",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CRED-PATH-JOIN",
+   "severity": "high",
+   "kind": "regex",
+   "category": "credential-access",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "CRED-SHADOW",
+   "severity": "high",
+   "kind": "regex",
+   "category": "credential-access",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CRED-SHELL-HISTORY",
+   "severity": "high",
+   "kind": "regex",
+   "category": "credential-access",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "DESTR-MASS-ENCRYPT",
+   "severity": "high",
+   "kind": "regex",
+   "category": "destructive",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EVADE-HISTORY-WIPE",
+   "severity": "high",
+   "kind": "regex",
+   "category": "defense-evasion",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EVADE-LOG-WIPE",
+   "severity": "high",
+   "kind": "regex",
+   "category": "defense-evasion",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-APPLESCRIPT-ADMIN",
+   "severity": "high",
+   "kind": "regex",
+   "category": "privilege-escalation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-DOWNLOAD-CHMOD",
+   "severity": "high",
+   "kind": "regex",
+   "category": "remote-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-LOLBIN-BITSADMIN",
+   "severity": "high",
+   "kind": "regex",
+   "category": "remote-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-LOLBIN-CERTUTIL",
+   "severity": "high",
+   "kind": "regex",
+   "category": "remote-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-LOLBIN-MSIEXEC",
+   "severity": "high",
+   "kind": "regex",
+   "category": "remote-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-LOLBIN-WMIC",
+   "severity": "high",
+   "kind": "regex",
+   "category": "dynamic-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-MEMORY-INJECTION",
+   "severity": "high",
+   "kind": "regex",
+   "category": "dynamic-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-PS-ENCODED",
+   "severity": "high",
+   "kind": "regex",
+   "category": "obfuscation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "EXEC-PS-HIDDEN-WINDOW",
+   "severity": "high",
+   "kind": "regex",
+   "category": "concealment",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "EXEC-PS-REFLECTION",
+   "severity": "high",
+   "kind": "regex",
+   "category": "dynamic-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-PY-MARSHAL",
+   "severity": "high",
+   "kind": "regex",
+   "category": "obfuscation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-PY-PTY",
+   "severity": "high",
+   "kind": "regex",
+   "category": "dynamic-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "FS-ALTERNATE-DATA-STREAM",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "hidden-content",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "FS-EXTENSION-MISMATCH",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "filesystem",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "FS-NAME-DOUBLE-EXTENSION",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "filesystem",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "FS-WINDOWS-HIDDEN-ATTRIBUTE",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "filesystem",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "HIDE-MARKDOWN-COMMENT",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "hidden-content",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "HIDE-VERTICAL-PADDING",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "hidden-content",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "INJ-ANTI-REFUSAL",
+   "severity": "high",
+   "kind": "regex",
+   "category": "prompt-injection",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "INJ-CHAT-TEMPLATE-TOKENS",
+   "severity": "high",
+   "kind": "regex",
+   "category": "prompt-injection",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "INJ-DONT-INSPECT",
+   "severity": "high",
+   "kind": "regex",
+   "category": "concealment",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "INJ-EXFIL-INSTRUCTION",
+   "severity": "high",
+   "kind": "regex",
+   "category": "exfiltration",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "INJ-FAKE-AUTHORITY",
+   "severity": "high",
+   "kind": "regex",
+   "category": "prompt-injection",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "INJ-IMPLEMENTATION-DETAIL",
+   "severity": "high",
+   "kind": "regex",
+   "category": "concealment",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "INJ-REMOTE-INSTRUCTIONS",
+   "severity": "high",
+   "kind": "regex",
+   "category": "prompt-injection",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "INJ-REVIEWER-MANIPULATION",
+   "severity": "high",
+   "kind": "regex",
+   "category": "prompt-injection",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "INJ-ROLE-HIJACK",
+   "severity": "high",
+   "kind": "regex",
+   "category": "prompt-injection",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "INJ-STEALTH-ACTION",
+   "severity": "high",
+   "kind": "regex",
+   "category": "concealment",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 2,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "INJ-TOOL-POISONING",
+   "severity": "high",
+   "kind": "regex",
+   "category": "prompt-injection",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "INJ-TOOL-SHADOWING",
+   "severity": "high",
+   "kind": "regex",
+   "category": "prompt-injection",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "IOC-EXFIL-SERVICE",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "exfiltration",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 3,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "META-TRIGGER-HIJACK",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "prompt-injection",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "NET-DNS-EXFIL",
+   "severity": "high",
+   "kind": "regex",
+   "category": "exfiltration",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "NET-MD-IMAGE-EXFIL",
+   "severity": "high",
+   "kind": "regex",
+   "category": "exfiltration",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "OBF-JS-OBFUSCATOR",
+   "severity": "high",
+   "kind": "regex",
+   "category": "obfuscation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "OBF-JSFUCK",
+   "severity": "high",
+   "kind": "regex",
+   "category": "obfuscation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "OBF-ROT13",
+   "severity": "high",
+   "kind": "regex",
+   "category": "obfuscation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "PERSIST-GIT-HOOKS",
+   "severity": "high",
+   "kind": "regex",
+   "category": "persistence",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "PERSIST-GIT-TEMPLATE",
+   "severity": "high",
+   "kind": "regex",
+   "category": "persistence",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "PERSIST-LAUNCHD",
+   "severity": "high",
+   "kind": "regex",
+   "category": "persistence",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "PERSIST-SCHTASKS",
+   "severity": "high",
+   "kind": "regex",
+   "category": "persistence",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "PERSIST-SYSTEMD",
+   "severity": "high",
+   "kind": "regex",
+   "category": "persistence",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "PERSIST-WIN-RUNKEY",
+   "severity": "high",
+   "kind": "regex",
+   "category": "persistence",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "PERSIST-WIN-SERVICE",
+   "severity": "high",
+   "kind": "regex",
+   "category": "persistence",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "PERSIST-WMI",
+   "severity": "high",
+   "kind": "regex",
+   "category": "persistence",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "PRIV-CONTAINER-ESCAPE",
+   "severity": "high",
+   "kind": "regex",
+   "category": "privilege-escalation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "PRIV-SETUID",
+   "severity": "high",
+   "kind": "regex",
+   "category": "privilege-escalation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "PRIV-UAC-BYPASS",
+   "severity": "high",
+   "kind": "regex",
+   "category": "privilege-escalation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "RECON-KEYLOGGING",
+   "severity": "high",
+   "kind": "regex",
+   "category": "recon",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SECRET-ANTHROPIC",
+   "severity": "high",
+   "kind": "regex",
+   "category": "secrets",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "SECRET-AWS-KEY-ID",
+   "severity": "high",
+   "kind": "regex",
+   "category": "secrets",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "SECRET-AWS-SECRET",
+   "severity": "high",
+   "kind": "regex",
+   "category": "secrets",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SECRET-DISCORD-BOT",
+   "severity": "high",
+   "kind": "regex",
+   "category": "secrets",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SECRET-GITHUB",
+   "severity": "high",
+   "kind": "regex",
+   "category": "secrets",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SECRET-GITLAB",
+   "severity": "high",
+   "kind": "regex",
+   "category": "secrets",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SECRET-HUGGINGFACE",
+   "severity": "high",
+   "kind": "regex",
+   "category": "secrets",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SECRET-NPM",
+   "severity": "high",
+   "kind": "regex",
+   "category": "secrets",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SECRET-OPENAI",
+   "severity": "high",
+   "kind": "regex",
+   "category": "secrets",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SECRET-PRIVATE-KEY",
+   "severity": "high",
+   "kind": "regex",
+   "category": "secrets",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SECRET-SENDGRID",
+   "severity": "high",
+   "kind": "regex",
+   "category": "secrets",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SECRET-SLACK",
+   "severity": "high",
+   "kind": "regex",
+   "category": "secrets",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SECRET-STRIPE",
+   "severity": "high",
+   "kind": "regex",
+   "category": "secrets",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SECRET-TELEGRAM-BOT",
+   "severity": "high",
+   "kind": "regex",
+   "category": "secrets",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SHELL-TUNNEL",
+   "severity": "high",
+   "kind": "regex",
+   "category": "reverse-shell",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SOC-DISABLE-SECURITY",
+   "severity": "high",
+   "kind": "regex",
+   "category": "defense-evasion",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SOC-FAKE-PREREQUISITE",
+   "severity": "high",
+   "kind": "regex",
+   "category": "social-engineering",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SOC-GATEKEEPER-BYPASS",
+   "severity": "high",
+   "kind": "regex",
+   "category": "defense-evasion",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 2,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "SOC-SUDO-PASSWORD-PIPE",
+   "severity": "high",
+   "kind": "regex",
+   "category": "social-engineering",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SUPPLY-PIP-INDEX",
+   "severity": "high",
+   "kind": "regex",
+   "category": "supply-chain",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SUPPLY-REGISTRY-REDIRECT",
+   "severity": "high",
+   "kind": "regex",
+   "category": "supply-chain",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "UNI-MULTIPLE-HIDDEN-TYPES",
+   "severity": "high",
+   "kind": "built-in",
+   "category": "unicode",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "HIDE-HTML-COMMENTS",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "hidden-content",
+   "legit_samples": 45,
+   "legit_hits": 62,
+   "legit_by_severity": {
+    "medium": 6,
+    "low": 49,
+    "info": 7
+   },
+   "where": {
+    "documentation": 46,
+    "bundled / third-party": 2,
+    "SKILL.md": 11,
+    "own code": 3
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CRED-DOTENV-READ",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "credential-access",
+   "legit_samples": 7,
+   "legit_hits": 20,
+   "legit_by_severity": {
+    "medium": 20
+   },
+   "where": {
+    "bundled / third-party": 13,
+    "own code": 6,
+    "documentation": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-EVAL",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "dynamic-exec",
+   "legit_samples": 7,
+   "legit_hits": 51,
+   "legit_by_severity": {
+    "medium": 51
+   },
+   "where": {
+    "own code": 25,
+    "bundled / third-party": 25,
+    "type definitions": 1
+   },
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "EXEC-JS-FUNCTION",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "dynamic-exec",
+   "legit_samples": 7,
+   "legit_hits": 27,
+   "legit_by_severity": {
+    "medium": 26,
+    "low": 1
+   },
+   "where": {
+    "bundled / third-party": 17,
+    "documentation": 3,
+    "own code": 6,
+    "type definitions": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "BIN-NATIVE-CODE-EXT",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "binary",
+   "legit_samples": 6,
+   "legit_hits": 6,
+   "legit_by_severity": {
+    "medium": 6
+   },
+   "where": {
+    "own code": 5,
+    "bundled / third-party": 1
+   },
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "META-REFERENCE-OUTSIDE",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "manifest",
+   "legit_samples": 6,
+   "legit_hits": 14,
+   "legit_by_severity": {
+    "medium": 14
+   },
+   "where": {
+    "SKILL.md": 14
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "UNI-CONTROL-CHARS",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "unicode",
+   "legit_samples": 5,
+   "legit_hits": 16,
+   "legit_by_severity": {
+    "medium": 16
+   },
+   "where": {
+    "bundled / third-party": 7,
+    "own code": 9
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "IOC-RAW-PUBLIC-IP",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "network",
+   "legit_samples": 4,
+   "legit_hits": 24,
+   "legit_by_severity": {
+    "medium": 24
+   },
+   "where": {
+    "own code": 21,
+    "bundled / third-party": 3
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "IOC-URL-CREDENTIALS",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "secrets",
+   "legit_samples": 4,
+   "legit_hits": 8,
+   "legit_by_severity": {
+    "medium": 8
+   },
+   "where": {
+    "own code": 1,
+    "documentation": 1,
+    "bundled / third-party": 6
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "AGENT-COMMAND-WRITE",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "agent-tampering",
+   "legit_samples": 3,
+   "legit_hits": 6,
+   "legit_by_severity": {
+    "medium": 5,
+    "low": 1
+   },
+   "where": {
+    "own code": 1,
+    "documentation": 5
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "AGENT-SCHEDULE-TASKS",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "agent-tampering",
+   "legit_samples": 3,
+   "legit_hits": 12,
+   "legit_by_severity": {
+    "medium": 12
+   },
+   "where": {
+    "SKILL.md": 12
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EVADE-VM-DETECTION",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "sandbox-evasion",
+   "legit_samples": 3,
+   "legit_hits": 41,
+   "legit_by_severity": {
+    "medium": 41
+   },
+   "where": {
+    "own code": 33,
+    "bundled / third-party": 8
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "FS-VENDORED-DIR",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "supply-chain",
+   "legit_samples": 3,
+   "legit_hits": 3,
+   "legit_by_severity": {
+    "medium": 3
+   },
+   "where": {
+    "bundled / third-party": 3
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "HIDE-DECEPTIVE-LINK",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "social-engineering",
+   "legit_samples": 3,
+   "legit_hits": 4,
+   "legit_by_severity": {
+    "medium": 4
+   },
+   "where": {
+    "documentation": 4
+   },
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "CAPABILITY-UNDECLARED-PERSISTENCE",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "correlation",
+   "legit_samples": 2,
+   "legit_hits": 2,
+   "legit_by_severity": {
+    "medium": 2
+   },
+   "where": {
+    "SKILL.md": 2
+   },
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "INJ-PRIORITY-CLAIM",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "prompt-injection",
+   "legit_samples": 2,
+   "legit_hits": 2,
+   "legit_by_severity": {
+    "medium": 2
+   },
+   "where": {
+    "type definitions": 1,
+    "bundled / third-party": 1
+   },
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "NET-IP-LOOKUP",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "recon",
+   "legit_samples": 2,
+   "legit_hits": 9,
+   "legit_by_severity": {
+    "medium": 9
+   },
+   "where": {
+    "documentation": 3,
+    "bundled / third-party": 6
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "PERM-UNRESTRICTED-SHELL",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "excessive-agency",
+   "legit_samples": 2,
+   "legit_hits": 2,
+   "legit_by_severity": {
+    "medium": 2
+   },
+   "where": {
+    "SKILL.md": 2
+   },
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "AGENT-HOOKS-DEFINITION",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "autorun",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "medium": 1
+   },
+   "where": {
+    "bundled / third-party": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "AGENT-PERMISSION-BYPASS-DOC",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "agent-tampering",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "low": 1
+   },
+   "where": {
+    "SKILL.md": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CAPABILITY-UNDECLARED-CREDENTIAL-ACCESS",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "correlation",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "medium": 1
+   },
+   "where": {
+    "SKILL.md": 1
+   },
+   "labels": {},
+   "malicious_samples": 4,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "CRED-ENV-HARVEST",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "credential-access",
+   "legit_samples": 1,
+   "legit_hits": 2,
+   "legit_by_severity": {
+    "medium": 2
+   },
+   "where": {
+    "bundled / third-party": 2
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-LOLBIN-PROXY",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "dynamic-exec",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "medium": 1
+   },
+   "where": {
+    "own code": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-PY-OS-SYSTEM",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "dynamic-exec",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "medium": 1
+   },
+   "where": {
+    "own code": 1
+   },
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "INJ-NO-CONFIRMATION",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "concealment",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "medium": 1
+   },
+   "where": {
+    "SKILL.md": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "INJ-ROLE-TAGS",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "prompt-injection",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "low": 1
+   },
+   "where": {
+    "bundled / third-party": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "IOC-URL-SHORTENER",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "network",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "medium": 1
+   },
+   "where": {
+    "bundled / third-party": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "NET-CURL-UPLOAD",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "network",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "medium": 1
+   },
+   "where": {
+    "documentation": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "NET-PS-UPLOAD",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "network",
+   "legit_samples": 1,
+   "legit_hits": 2,
+   "legit_by_severity": {
+    "medium": 2
+   },
+   "where": {
+    "bundled / third-party": 1,
+    "own code": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "OBF-HEX-ESCAPES",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "obfuscation",
+   "legit_samples": 1,
+   "legit_hits": 2,
+   "legit_by_severity": {
+    "medium": 2
+   },
+   "where": {
+    "bundled / third-party": 2
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "OBF-IFS",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "obfuscation",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "medium": 1
+   },
+   "where": {
+    "own code": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "OBF-STRING-REVERSE",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "obfuscation",
+   "legit_samples": 1,
+   "legit_hits": 4,
+   "legit_by_severity": {
+    "medium": 4
+   },
+   "where": {
+    "bundled / third-party": 4
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "PERM-RISKY-SHELL-COMMAND",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "excessive-agency",
+   "legit_samples": 1,
+   "legit_hits": 3,
+   "legit_by_severity": {
+    "medium": 3
+   },
+   "where": {
+    "SKILL.md": 3
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "RECON-AV-CAPTURE",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "recon",
+   "legit_samples": 1,
+   "legit_hits": 6,
+   "legit_by_severity": {
+    "medium": 6
+   },
+   "where": {
+    "bundled / third-party": 6
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SECRET-GOOGLE-API",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "secrets",
+   "legit_samples": 1,
+   "legit_hits": 2,
+   "legit_by_severity": {
+    "medium": 2
+   },
+   "where": {
+    "bundled / third-party": 1,
+    "own code": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SECRET-JWT",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "secrets",
+   "legit_samples": 1,
+   "legit_hits": 2,
+   "legit_by_severity": {
+    "medium": 2
+   },
+   "where": {
+    "own code": 2
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SHELL-REMOTE-ADMIN-TOOL",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "reverse-shell",
+   "legit_samples": 1,
+   "legit_hits": 27,
+   "legit_by_severity": {
+    "medium": 27
+   },
+   "where": {
+    "own code": 27
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SUPPLY-NPM-DIRECT-URL",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "supply-chain",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "medium": 1
+   },
+   "where": {
+    "documentation": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SUPPLY-NPM-NONREGISTRY-DEP",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "supply-chain",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "medium": 1
+   },
+   "where": {
+    "bundled / third-party": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "UNI-HOMOGLYPH-WHOLE-WORD",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "unicode",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "medium": 1
+   },
+   "where": {
+    "bundled / third-party": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "UNI-PRIVATE-USE",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "unicode",
+   "legit_samples": 1,
+   "legit_hits": 3,
+   "legit_by_severity": {
+    "medium": 3
+   },
+   "where": {
+    "own code": 3
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "AGENT-BUNDLED-MCP-CONFIG",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "agent-tampering",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "BIN-IMAGE-METADATA-TEXT",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "hidden-content",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "CAPABILITY-UNDECLARED-NETWORK-SEND",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "correlation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 4,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "CRED-SENSITIVE-GLOB",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "credential-access",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "DESTR-GIT-FORCE",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "destructive",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EVADE-LONG-SLEEP",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "sandbox-evasion",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EVADE-TIME-BOMB",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "sandbox-evasion",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-DESERIALIZE",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "dynamic-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-NET-WEBCLIENT",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "remote-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "EXEC-PS-DLLIMPORT",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "dynamic-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-PS-POLICY-BYPASS",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "defense-evasion",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "EXEC-PY-COMPILE",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "dynamic-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-PY-SUBPROCESS-SHELL",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "dynamic-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-PY-YAML-UNSAFE",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "dynamic-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-WSH-OBJECTS",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "dynamic-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "FIN-WALLET-TRANSFER",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "financial",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "INJ-BAN-USER-QUESTIONS",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "concealment",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "INJ-COMPLIANCE-FRAMING",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "prompt-injection",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "INJ-DECEPTIVE-OUTPUT",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "concealment",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "INJ-NEW-INSTRUCTIONS",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "prompt-injection",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "INJ-NONTEXT-INSTRUCTIONS",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "hidden-content",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "INJ-TOOL-WILL-NOT-WORK",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "prompt-injection",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "META-RISKY-FIELD-USER-INVOCABLE",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "manifest",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "NET-EMAIL-SEND",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "exfiltration",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "NET-MAIL-BCC-INJECT",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "exfiltration",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "NET-NETCAT",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "network",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "NET-REMOTE-COPY",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "exfiltration",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "OBF-CHARCODE-JS",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "obfuscation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "OBF-CHARCODE-PS",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "obfuscation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "OBF-CHARCODE-PY",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "obfuscation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "OBF-PS-TICKS",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "obfuscation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "OBF-SHELLCODE-ARRAY",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "obfuscation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "OBF-UNICODE-ESCAPES",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "obfuscation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "PRIV-CAPABILITIES",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "privilege-escalation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "RECON-NETWORK-ENUM",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "recon",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "RECON-SCREEN-CAPTURE",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "recon",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SECRET-CONNECTION-STRING",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "secrets",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SECRET-DOTENV-FILE",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "secrets",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "SOC-CLICKFIX",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "social-engineering",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 2,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "SOC-URGENCY-BANNER",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "social-engineering",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 2,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "SUPPLY-PIP-DIRECT-URL",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "supply-chain",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SUPPLY-REQUIREMENTS-DIRECT-URL",
+   "severity": "medium",
+   "kind": "regex",
+   "category": "supply-chain",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "UNI-BIDI-CONTROL",
+   "severity": "medium",
+   "kind": "built-in",
+   "category": "unicode",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "AGENT-CONFIG-REF",
+   "severity": "low",
+   "kind": "regex",
+   "category": "agent-tampering",
+   "legit_samples": 23,
+   "legit_hits": 83,
+   "legit_by_severity": {
+    "low": 33,
+    "info": 50
+   },
+   "where": {
+    "type definitions": 1,
+    "own code": 7,
+    "documentation": 39,
+    "SKILL.md": 35,
+    "bundled / third-party": 1
+   },
+   "labels": {},
+   "malicious_samples": 2,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "OBF-BASE64-DECODE",
+   "severity": "low",
+   "kind": "regex",
+   "category": "obfuscation",
+   "legit_samples": 15,
+   "legit_hits": 97,
+   "legit_by_severity": {
+    "low": 97
+   },
+   "where": {
+    "bundled / third-party": 25,
+    "documentation": 2,
+    "own code": 70
+   },
+   "labels": {},
+   "malicious_samples": 3,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "IOC-FREE-HOSTING",
+   "severity": "low",
+   "kind": "built-in",
+   "category": "network",
+   "legit_samples": 13,
+   "legit_hits": 83,
+   "legit_by_severity": {
+    "low": 83
+   },
+   "where": {
+    "type definitions": 10,
+    "documentation": 7,
+    "bundled / third-party": 25,
+    "own code": 41
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-JS-CHILD-PROCESS",
+   "severity": "low",
+   "kind": "regex",
+   "category": "dynamic-exec",
+   "legit_samples": 8,
+   "legit_hits": 35,
+   "legit_by_severity": {
+    "low": 35
+   },
+   "where": {
+    "bundled / third-party": 11,
+    "own code": 22,
+    "documentation": 1,
+    "type definitions": 1
+   },
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "AGENT-MCP-REGISTER",
+   "severity": "low",
+   "kind": "regex",
+   "category": "agent-tampering",
+   "legit_samples": 7,
+   "legit_hits": 22,
+   "legit_by_severity": {
+    "low": 21,
+    "info": 1
+   },
+   "where": {
+    "documentation": 17,
+    "SKILL.md": 5
+   },
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "EVADE-CI-AWARE",
+   "severity": "low",
+   "kind": "regex",
+   "category": "sandbox-evasion",
+   "legit_samples": 7,
+   "legit_hits": 27,
+   "legit_by_severity": {
+    "low": 27
+   },
+   "where": {
+    "bundled / third-party": 4,
+    "own code": 13,
+    "type definitions": 8,
+    "documentation": 1,
+    "SKILL.md": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "META-MISSING-REFERENCE",
+   "severity": "low",
+   "kind": "built-in",
+   "category": "supply-chain",
+   "legit_samples": 7,
+   "legit_hits": 7,
+   "legit_by_severity": {
+    "low": 7
+   },
+   "where": {
+    "SKILL.md": 7
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "NET-RAW-SOCKET",
+   "severity": "low",
+   "kind": "regex",
+   "category": "network",
+   "legit_samples": 6,
+   "legit_hits": 11,
+   "legit_by_severity": {
+    "low": 11
+   },
+   "where": {
+    "bundled / third-party": 5,
+    "own code": 6
+   },
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "EVADE-DETACHED-PROCESS",
+   "severity": "low",
+   "kind": "regex",
+   "category": "defense-evasion",
+   "legit_samples": 5,
+   "legit_hits": 17,
+   "legit_by_severity": {
+    "low": 17
+   },
+   "where": {
+    "own code": 8,
+    "bundled / third-party": 8,
+    "SKILL.md": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "INJ-SAFETY-CLAIM",
+   "severity": "low",
+   "kind": "regex",
+   "category": "prompt-injection",
+   "legit_samples": 5,
+   "legit_hits": 5,
+   "legit_by_severity": {
+    "low": 5
+   },
+   "where": {
+    "documentation": 5
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "META-MISSING-INVOKED-SCRIPT",
+   "severity": "low",
+   "kind": "built-in",
+   "category": "supply-chain",
+   "legit_samples": 4,
+   "legit_hits": 4,
+   "legit_by_severity": {
+    "low": 4
+   },
+   "where": {
+    "SKILL.md": 4
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SUPPLY-UNPINNED-LATEST",
+   "severity": "low",
+   "kind": "regex",
+   "category": "supply-chain",
+   "legit_samples": 4,
+   "legit_hits": 18,
+   "legit_by_severity": {
+    "low": 18
+   },
+   "where": {
+    "documentation": 11,
+    "bundled / third-party": 1,
+    "SKILL.md": 4,
+    "own code": 2
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "BIN-SVG-HTML-SCRIPT",
+   "severity": "low",
+   "kind": "built-in",
+   "category": "dynamic-exec",
+   "legit_samples": 3,
+   "legit_hits": 9,
+   "legit_by_severity": {
+    "low": 1,
+    "info": 8
+   },
+   "where": {
+    "documentation": 9
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-EVAL-DOC",
+   "severity": "low",
+   "kind": "regex",
+   "category": "dynamic-exec",
+   "legit_samples": 3,
+   "legit_hits": 3,
+   "legit_by_severity": {
+    "low": 2,
+    "info": 1
+   },
+   "where": {
+    "documentation": 1,
+    "SKILL.md": 1,
+    "bundled / third-party": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "META-DESCRIPTION-XML",
+   "severity": "low",
+   "kind": "built-in",
+   "category": "manifest",
+   "legit_samples": 3,
+   "legit_hits": 3,
+   "legit_by_severity": {
+    "low": 3
+   },
+   "where": {
+    "SKILL.md": 3
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "PERSIST-SHELL-RC-REF",
+   "severity": "low",
+   "kind": "regex",
+   "category": "persistence",
+   "legit_samples": 3,
+   "legit_hits": 8,
+   "legit_by_severity": {
+    "low": 8
+   },
+   "where": {
+    "own code": 3,
+    "bundled / third-party": 4,
+    "documentation": 1
+   },
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "PRIV-ELEVATE",
+   "severity": "low",
+   "kind": "regex",
+   "category": "privilege-escalation",
+   "legit_samples": 3,
+   "legit_hits": 7,
+   "legit_by_severity": {
+    "low": 7
+   },
+   "where": {
+    "documentation": 1,
+    "SKILL.md": 2,
+    "own code": 4
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SECRET-GENERIC-ASSIGNMENT",
+   "severity": "low",
+   "kind": "regex",
+   "category": "secrets",
+   "legit_samples": 3,
+   "legit_hits": 3,
+   "legit_by_severity": {
+    "low": 3
+   },
+   "where": {
+    "type definitions": 1,
+    "own code": 1,
+    "bundled / third-party": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SUPPLY-NPM-UNPINNED",
+   "severity": "low",
+   "kind": "built-in",
+   "category": "supply-chain",
+   "legit_samples": 3,
+   "legit_hits": 3,
+   "legit_by_severity": {
+    "low": 3
+   },
+   "where": {
+    "own code": 3
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "IOC-SUSPICIOUS-TLD",
+   "severity": "low",
+   "kind": "built-in",
+   "category": "network",
+   "legit_samples": 2,
+   "legit_hits": 14,
+   "legit_by_severity": {
+    "low": 14
+   },
+   "where": {
+    "own code": 12,
+    "bundled / third-party": 2
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "META-NAME-IMPERSONATION",
+   "severity": "low",
+   "kind": "built-in",
+   "category": "manifest",
+   "legit_samples": 2,
+   "legit_hits": 2,
+   "legit_by_severity": {
+    "low": 2
+   },
+   "where": {
+    "SKILL.md": 2
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "OBF-HIGH-ENTROPY-BLOB",
+   "severity": "low",
+   "kind": "built-in",
+   "category": "obfuscation",
+   "legit_samples": 2,
+   "legit_hits": 2,
+   "legit_by_severity": {
+    "low": 2
+   },
+   "where": {
+    "own code": 2
+   },
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "PERSIST-LIBRARY-PRELOAD",
+   "severity": "low",
+   "kind": "regex",
+   "category": "defense-evasion",
+   "legit_samples": 2,
+   "legit_hits": 4,
+   "legit_by_severity": {
+    "low": 4
+   },
+   "where": {
+    "own code": 4
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SUPPLY-RUNTIME-PACKAGE-EXEC",
+   "severity": "low",
+   "kind": "regex",
+   "category": "supply-chain",
+   "legit_samples": 2,
+   "legit_hits": 2,
+   "legit_by_severity": {
+    "low": 2
+   },
+   "where": {
+    "SKILL.md": 1,
+    "bundled / third-party": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CRYPTO-CLIPBOARD-READ",
+   "severity": "low",
+   "kind": "regex",
+   "category": "crypto-theft",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "low": 1
+   },
+   "where": {
+    "documentation": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "FS-HIDDEN-DIRECTORY",
+   "severity": "low",
+   "kind": "built-in",
+   "category": "filesystem",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "low": 1
+   },
+   "where": {
+    "bundled / third-party": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "FS-MANY-FILES",
+   "severity": "low",
+   "kind": "built-in",
+   "category": "filesystem",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "low": 1
+   },
+   "where": {
+    "whole package": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "INJ-PSEUDO-TAGS",
+   "severity": "low",
+   "kind": "regex",
+   "category": "prompt-injection",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "info": 1
+   },
+   "where": {
+    "bundled / third-party": 1
+   },
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "INJ-ROLE-REASSIGN",
+   "severity": "low",
+   "kind": "regex",
+   "category": "prompt-injection",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "low": 1
+   },
+   "where": {
+    "documentation": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "META-NAME-DIR-MISMATCH",
+   "severity": "low",
+   "kind": "built-in",
+   "category": "manifest",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "low": 1
+   },
+   "where": {
+    "SKILL.md": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "NET-HTTP-POST-JS",
+   "severity": "low",
+   "kind": "regex",
+   "category": "network",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "low": 1
+   },
+   "where": {
+    "documentation": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "OBF-ENCODED-CODE",
+   "severity": "low",
+   "kind": "built-in",
+   "category": "obfuscation",
+   "legit_samples": 1,
+   "legit_hits": 2,
+   "legit_by_severity": {
+    "low": 2
+   },
+   "where": {
+    "own code": 1,
+    "bundled / third-party": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "PRIV-WORLD-WRITABLE",
+   "severity": "low",
+   "kind": "regex",
+   "category": "privilege-escalation",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "low": 1
+   },
+   "where": {
+    "SKILL.md": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "UNI-STYLED-LETTERS",
+   "severity": "low",
+   "kind": "built-in",
+   "category": "unicode",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "low": 1
+   },
+   "where": {
+    "own code": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CRED-KEYRING",
+   "severity": "low",
+   "kind": "regex",
+   "category": "credential-access",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EVADE-TIMESTOMP",
+   "severity": "low",
+   "kind": "regex",
+   "category": "defense-evasion",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-OSASCRIPT",
+   "severity": "low",
+   "kind": "regex",
+   "category": "dynamic-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-PY-DYNAMIC-IMPORT",
+   "severity": "low",
+   "kind": "regex",
+   "category": "dynamic-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-SHELL-EVAL",
+   "severity": "low",
+   "kind": "regex",
+   "category": "dynamic-exec",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "FIN-AFFILIATE-STEERING",
+   "severity": "low",
+   "kind": "regex",
+   "category": "financial",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "IOC-GITHUB-RELEASE-DOWNLOAD",
+   "severity": "low",
+   "kind": "built-in",
+   "category": "network",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 2,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "META-DESCRIPTION-VAGUE",
+   "severity": "low",
+   "kind": "built-in",
+   "category": "manifest",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "NET-HTTP-POST-PY",
+   "severity": "low",
+   "kind": "regex",
+   "category": "network",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 1,
+   "load_bearing_for": 0,
+   "status": "malicious example"
+  },
+  {
+   "rule": "OBF-STRING-CONCAT",
+   "severity": "low",
+   "kind": "regex",
+   "category": "obfuscation",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SUPPLY-BREAK-SYSTEM",
+   "severity": "low",
+   "kind": "regex",
+   "category": "supply-chain",
+   "legit_samples": 0,
+   "legit_hits": 0,
+   "legit_by_severity": {},
+   "where": {},
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "META-NO-SKILL-MD",
+   "severity": "info",
+   "kind": "built-in",
+   "category": "manifest",
+   "legit_samples": 90,
+   "legit_hits": 90,
+   "legit_by_severity": {
+    "info": 90
+   },
+   "where": {
+    "whole package": 90
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SUPPLY-PACKAGE-INSTALL",
+   "severity": "info",
+   "kind": "regex",
+   "category": "supply-chain",
+   "legit_samples": 76,
+   "legit_hits": 126,
+   "legit_by_severity": {
+    "info": 126
+   },
+   "where": {
+    "documentation": 81,
+    "bundled / third-party": 9,
+    "SKILL.md": 14,
+    "own code": 22
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "META-LONG-BODY",
+   "severity": "info",
+   "kind": "built-in",
+   "category": "manifest",
+   "legit_samples": 7,
+   "legit_hits": 7,
+   "legit_by_severity": {
+    "info": 7
+   },
+   "where": {
+    "SKILL.md": 7
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "NET-HTTP-CLIENT",
+   "severity": "info",
+   "kind": "regex",
+   "category": "network",
+   "legit_samples": 7,
+   "legit_hits": 18,
+   "legit_by_severity": {
+    "info": 18
+   },
+   "where": {
+    "documentation": 4,
+    "type definitions": 3,
+    "SKILL.md": 1,
+    "own code": 8,
+    "bundled / third-party": 2
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "EXEC-PY-SUBPROCESS",
+   "severity": "info",
+   "kind": "regex",
+   "category": "dynamic-exec",
+   "legit_samples": 5,
+   "legit_hits": 18,
+   "legit_by_severity": {
+    "info": 18
+   },
+   "where": {
+    "own code": 17,
+    "SKILL.md": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "META-PLUGIN-ROOT-SCRIPTS",
+   "severity": "info",
+   "kind": "built-in",
+   "category": "manifest",
+   "legit_samples": 5,
+   "legit_hits": 5,
+   "legit_by_severity": {
+    "info": 5
+   },
+   "where": {
+    "SKILL.md": 5
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "RECON-SYSTEM-INFO",
+   "severity": "info",
+   "kind": "regex",
+   "category": "recon",
+   "legit_samples": 5,
+   "legit_hits": 19,
+   "legit_by_severity": {
+    "info": 19
+   },
+   "where": {
+    "own code": 6,
+    "bundled / third-party": 7,
+    "documentation": 1,
+    "type definitions": 5
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CRED-API-KEY-ENV",
+   "severity": "info",
+   "kind": "regex",
+   "category": "credential-access",
+   "legit_samples": 4,
+   "legit_hits": 5,
+   "legit_by_severity": {
+    "info": 5
+   },
+   "where": {
+    "own code": 2,
+    "documentation": 3
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "CRED-ENV-ITERATE",
+   "severity": "info",
+   "kind": "regex",
+   "category": "credential-access",
+   "legit_samples": 4,
+   "legit_hits": 10,
+   "legit_by_severity": {
+    "info": 10
+   },
+   "where": {
+    "own code": 8,
+    "bundled / third-party": 2
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "FS-DOTFILE",
+   "severity": "info",
+   "kind": "built-in",
+   "category": "filesystem",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "info": 1
+   },
+   "where": {
+    "own code": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "META-NAME-LURE-CATEGORY",
+   "severity": "info",
+   "kind": "built-in",
+   "category": "manifest",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "info": 1
+   },
+   "where": {
+    "SKILL.md": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  },
+  {
+   "rule": "SUPPLY-CI-WORKFLOW",
+   "severity": "info",
+   "kind": "built-in",
+   "category": "supply-chain",
+   "legit_samples": 1,
+   "legit_hits": 1,
+   "legit_by_severity": {
+    "info": 1
+   },
+   "where": {
+    "own code": 1
+   },
+   "labels": {},
+   "malicious_samples": 0,
+   "load_bearing_for": 0,
+   "status": "unknown"
+  }
+ ],
+ "tag": "baseline-1.0.0"
+}

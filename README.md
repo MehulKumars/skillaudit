@@ -213,10 +213,13 @@ assurance you get as you add the other layers.
 | 10 defanged attack scenarios modelled on real incidents, plus 1 clean control | **10/10 flagged** (9 CRITICAL, 1 HIGH), each for the expected reasons; the control is CLEAN |
 | 108 real installed skills (official Anthropic skills, the Claude plugin marketplace, Codex system skills) | **0 CRITICAL, 1 HIGH**, 15 MEDIUM, 40 LOW, 52 CLEAN. The one HIGH pipes the official Homebrew installer into `bash`, which really is remote code execution. |
 | Speed | 108 skills in about 84 s on a laptop; a 22 MB padded file in about 1.3 s |
+| [Benchmark baseline, 1.0.0](benchmark/results/baseline-1.0.0.md): 306 legitimate skills and packages on one machine, plus the 10 attack demos | All 10 demos caught. 17 legitimate samples rated CRITICAL (7 of 166 tuning samples, 10 of 140 held back), among them Chrome DevTools MCP and Playwright. On the tuning samples every CRITICAL finding is a wrong match except one package's embedded WebAssembly. Recorded before any fix. |
 
 The attack scenarios were written by the same author as the rules, so treat 10/10 as "the known techniques are
-covered", not as a real-world detection rate. Published research shows any static scanner can be evaded by a
-determined attacker (SkillCloak rewriting, ColluSkill split payloads, PyCache tricks).
+covered", not as a real-world detection rate. The same limit applies to the benchmark: its malicious samples and the
+rules have one author, and its legitimate samples are what one developer had installed. Published research shows any
+static scanner can be evaded by a determined attacker (SkillCloak rewriting, ColluSkill split payloads, PyCache
+tricks).
 
 ### The assurance ladder
 

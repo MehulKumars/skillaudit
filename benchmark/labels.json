@@ -1,0 +1,1084 @@
+{
+ "labels": [
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "4aa5e5e9f7c56d00",
+   "rule": "CHAIN-CONCEALED-ACTION",
+   "severity": "high",
+   "where": "(skill):0",
+   "label": "wrong match",
+   "reason": "the 'concealment' is that prompt about formatting markers; the risky capabilities are elsewhere and unrelated"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "aefdc966bdb931d9",
+   "rule": "CHAIN-CREDENTIAL-EXFILTRATION",
+   "severity": "critical",
+   "where": "out/Default/gen/src/third_party/index.js:0",
+   "label": "wrong match",
+   "reason": "built on the CRED-BROWSER wrong matches"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "af0bfa350174f503",
+   "rule": "CHAIN-DECODE-EXECUTE",
+   "severity": "high",
+   "where": "out/Default/gen/src/third_party/devtools-formatter-worker.js:0",
+   "label": "real but normal here",
+   "reason": "base64 decoding and an execution call both occur in one large file; nothing shows the decoded data reaches the call"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "62aae6d6a0b4b46d",
+   "rule": "CHAIN-DECODE-EXECUTE",
+   "severity": "high",
+   "where": "out/Default/gen/src/third_party/devtools-heap-snapshot-worker.js:0",
+   "label": "real but normal here",
+   "reason": "base64 decoding and an execution call both occur in one large file; nothing shows the decoded data reaches the call"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "8166da81c5f45c89",
+   "rule": "CHAIN-DECODE-EXECUTE",
+   "severity": "high",
+   "where": "out/Default/gen/src/third_party/index.js:0",
+   "label": "real but normal here",
+   "reason": "base64 decoding and an execution call both occur in one large file; nothing shows the decoded data reaches the call"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "dae91a1875414b83",
+   "rule": "CHAIN-DECODE-EXECUTE",
+   "severity": "high",
+   "where": "out/Default/gen/src/third_party/lighthouse-devtools-mcp-bundle.js:0",
+   "label": "real but normal here",
+   "reason": "base64 decoding and an execution call both occur in one large file; nothing shows the decoded data reaches the call"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "d21cd16a05e7e944",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "out/Default/gen/src/third_party/index.js:14962",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "7e1dc46a14352932",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "out/Default/gen/src/third_party/index.js:15105",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "fd5f811af831bf74",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "out/Default/gen/src/third_party/index.js:17436",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "0f7dd60d9cf603d7",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "out/Default/gen/src/third_party/index.js:17462",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "009b298eb7ba6816",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "out/Default/gen/src/third_party/index.js:74790",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "6438ed66f16072c3",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "out/Default/gen/src/third_party/index.js:77214",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "c8a6d0a6f9d2e734",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "out/Default/gen/src/third_party/lighthouse-devtools-mcp-bundle.js:32503",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "501963fabf35f822",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "out/Default/gen/src/third_party/lighthouse-devtools-mcp-bundle.js:35414",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "d79ef6165970c4aa",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "out/Default/gen/src/third_party/lighthouse-devtools-mcp-bundle.js:51321",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "0811859fe3f0b822",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "out/Default/gen/src/third_party/lighthouse-devtools-mcp-bundle.js:53392",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "fe9d3f0121b48513",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "out/Default/gen/src/third_party/lighthouse-devtools-mcp-bundle.js:56965",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "d7823faf5915db31",
+   "rule": "CRED-PROC-ENVIRON",
+   "severity": "high",
+   "where": "out/Default/gen/src/daemon/utils.js:85",
+   "label": "wrong match",
+   "reason": "reads a process's command line (not its environment) to recognise its own daemon"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "680f69de2b6d2afa",
+   "rule": "EXEC-DOWNLOAD-EXECUTABLE",
+   "severity": "high",
+   "where": "out/Default/gen/src/third_party/index.js:17462",
+   "label": "real but normal here",
+   "reason": "the bisect command downloads Chromium's bisect-builds.py, a developer feature run on request"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "2fda8539521214d6",
+   "rule": "EXEC-JS-REMOTE-EXEC",
+   "severity": "critical",
+   "where": "out/Default/gen/src/third_party/lighthouse-devtools-mcp-bundle.js:35462",
+   "label": "wrong match",
+   "reason": "the keyword 'function' read as the Function constructor; nothing evaluates fetched text"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "700307068950ca60",
+   "rule": "EXEC-JS-REMOTE-EXEC",
+   "severity": "critical",
+   "where": "out/Default/gen/src/third_party/lighthouse-devtools-mcp-bundle.js:39411",
+   "label": "wrong match",
+   "reason": "the keyword 'function' read as the Function constructor; nothing evaluates fetched text"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "c87b3b107ab9bef1",
+   "rule": "EXEC-JS-REMOTE-EXEC",
+   "severity": "critical",
+   "where": "out/Default/gen/src/third_party/lighthouse-devtools-mcp-bundle.js:39411",
+   "label": "wrong match",
+   "reason": "the keyword 'function' read as the Function constructor; nothing evaluates fetched text"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "ec4f67a36c10914b",
+   "rule": "INJ-CONCEAL-FROM-USER",
+   "severity": "high",
+   "where": "out/Default/gen/src/third_party/index.js:199397",
+   "label": "real but normal here",
+   "reason": "a bundled AI prompt telling the model not to show internal function markers to the user"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "935b87744e8e70b1",
+   "rule": "IOC-NON-ASCII-HOST",
+   "severity": "high",
+   "where": "out/Default/gen/src/third_party/index.js:88206",
+   "label": "wrong match",
+   "reason": "a garbled character in a documentation table, not a hostname"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "b3c0990669d35f39",
+   "rule": "OBF-MINIFIED-CODE",
+   "severity": "high",
+   "where": "out/Default/gen/src/third_party/cli.js:37",
+   "label": "real but normal here",
+   "reason": "published package ships minified or generated single-line code; the description (long line, hard to review) is accurate"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "2cc72a7d137eec78",
+   "rule": "OBF-MINIFIED-CODE",
+   "severity": "high",
+   "where": "out/Default/gen/src/third_party/devtools-formatter-worker.js:11129",
+   "label": "real but normal here",
+   "reason": "published package ships minified or generated single-line code; the description (long line, hard to review) is accurate"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "1d9a21a0977b03e1",
+   "rule": "OBF-MINIFIED-CODE",
+   "severity": "high",
+   "where": "out/Default/gen/src/third_party/devtools-heap-snapshot-worker.js:11123",
+   "label": "real but normal here",
+   "reason": "published package ships minified or generated single-line code; the description (long line, hard to review) is accurate"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "5186fbefa0d63f90",
+   "rule": "PERSIST-BROWSER-EXTENSION",
+   "severity": "high",
+   "where": "out/Default/gen/src/third_party/index.js:92204",
+   "label": "real but normal here",
+   "reason": "DevTools Protocol API for loading an unpacked extension; expected in a browser-automation tool"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "65611dc32be9d4c9",
+   "rule": "PERSIST-SHELL-RC-WRITE",
+   "severity": "high",
+   "where": "out/Default/gen/src/third_party/cli.js:6276",
+   "label": "wrong match",
+   "reason": "comments in a shell-completion template telling the user how to enable completion"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "0ba94925d9816a9d",
+   "rule": "PERSIST-SHELL-RC-WRITE",
+   "severity": "high",
+   "where": "out/Default/gen/src/third_party/cli.js:6277",
+   "label": "wrong match",
+   "reason": "comments in a shell-completion template telling the user how to enable completion"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "d76e1e731afd5efa",
+   "rule": "PERSIST-SHELL-RC-WRITE",
+   "severity": "high",
+   "where": "out/Default/gen/src/third_party/cli.js:6307",
+   "label": "wrong match",
+   "reason": "comments in a shell-completion template telling the user how to enable completion"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "049588454867d7a3",
+   "rule": "PERSIST-SHELL-RC-WRITE",
+   "severity": "high",
+   "where": "out/Default/gen/src/third_party/cli.js:6308",
+   "label": "wrong match",
+   "reason": "comments in a shell-completion template telling the user how to enable completion"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "3d1961668b73cd17",
+   "rule": "SUPPLY-NPM-INSTALL-SCRIPT",
+   "severity": "high",
+   "where": "package.json:0",
+   "label": "wrong match",
+   "reason": "the only hooks are 'prepare' or 'prepublish', which npm does not run when the package is installed from the registry"
+  },
+  {
+   "sample": "npm:chrome-devtools-mcp@1.13.0",
+   "unit": "chrome-devtools-mcp (files outside skills)",
+   "fingerprint": "0e03c50c7e0dba63",
+   "rule": "UNI-HOMOGLYPH-MIXED-SCRIPT",
+   "severity": "high",
+   "where": "out/Default/gen/src/third_party/lighthouse-devtools-mcp-bundle.js:31716",
+   "label": "wrong match",
+   "reason": "a list of punycode top-level domains, not a disguised word"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "c2680b0eff217368",
+   "rule": "BIN-COMPILED-CODE",
+   "severity": "high",
+   "where": "lib/webp_codec.wasm:0",
+   "label": "real but normal here",
+   "reason": "WebAssembly module shipped by the package"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "f0bf01b68b1f9e4c",
+   "rule": "CHAIN-DECODE-EXECUTE",
+   "severity": "high",
+   "where": "lib/coreBundle.js:0",
+   "label": "real but normal here",
+   "reason": "base64 decoding and an execution call both occur in one large file; nothing shows the decoded data reaches the call"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "b6a1559f887718b6",
+   "rule": "CHAIN-DECODE-EXECUTE",
+   "severity": "high",
+   "where": "lib/utilsBundle.js:0",
+   "label": "real but normal here",
+   "reason": "base64 decoding and an execution call both occur in one large file; nothing shows the decoded data reaches the call"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "9c264f850d823f20",
+   "rule": "CHAIN-DECODE-EXECUTE",
+   "severity": "high",
+   "where": "lib/vite/traceViewer/uiMode.CHEUJhie.js:0",
+   "label": "wrong match",
+   "reason": "the execution side is the 'function' keyword wrong match"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "565b546e50db0d70",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "lib/coreBundle.js:35002",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "e4a6c81a0f2a0b4c",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "lib/coreBundle.js:36612",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "cb1b9cc45484cbc0",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "lib/coreBundle.js:36615",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "2b5203a8b62fa0fb",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "lib/coreBundle.js:36660",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "177c127d4a9c2c59",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "lib/coreBundle.js:36694",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "ba2e675eef080200",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "lib/coreBundle.js:36696",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "beb89392a7a077d0",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "lib/coreBundle.js:36708",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "106541fc4104dda7",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "lib/server/electron/loader.js:50",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "0eb60b6fd8651aa0",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "lib/server/electron/loader.js:6",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "c8c333e853771949",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "lib/server/electron/loader.js:84",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "9cd2e6a749196429",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "lib/server/electron/loader.js:86",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "299feea817747041",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "lib/server/electron/loader.js:98",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "d90f2191de4c7943",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "lib/tools/cli-client/help.json:633",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "1e088402b6a4a79a",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "lib/utilsBundle.js:52578",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "7dcd7823607213ad",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "lib/utilsBundle.js:52579",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "3405bb4c3b8a7407",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "lib/utilsBundle.js:52588",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "326d81010eadaaab",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "lib/utilsBundle.js:52589",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "f3feca6b767cba30",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "lib/utilsBundle.js:52604",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "10356e7708c4ff27",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "types/protocol.d.ts:1030",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "cccffa55170445ad",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "types/protocol.d.ts:1422",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "d191c1335f43f120",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "types/protocol.d.ts:1992",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "99b85744979af2d7",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "types/protocol.d.ts:7746",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "03bdd38c889a24cf",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "types/protocol.d.ts:9480",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "e2759e074497f1d5",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "types/types.d.ts:11844",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "fe5a148d91977969",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "types/types.d.ts:17674",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "b3a930436c006c8c",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "types/types.d.ts:17690",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "8b3ffcd85cc13d30",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "types/types.d.ts:17696",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "e2759e074497f1d5",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "types/types.d.ts:18270",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "e2759e074497f1d5",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "types/types.d.ts:24778",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "af3b9199f7b24e45",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "types/types.d.ts:3535",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "af3b9199f7b24e45",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "types/types.d.ts:7805",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "a6c9c1a059b8dbe3",
+   "rule": "EXEC-DOWNLOAD-EXECUTABLE",
+   "severity": "high",
+   "where": "bin/reinstall_chrome_beta_linux.sh:38",
+   "label": "real but normal here",
+   "reason": "test-setup script that downloads Google Chrome from dl.google.com to install it"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "d300f57ab0735dc2",
+   "rule": "EXEC-DOWNLOAD-EXECUTABLE",
+   "severity": "high",
+   "where": "bin/reinstall_chrome_beta_mac.sh:7",
+   "label": "real but normal here",
+   "reason": "test-setup script that downloads Google Chrome from dl.google.com to install it"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "ab633ec54c249021",
+   "rule": "EXEC-DOWNLOAD-EXECUTABLE",
+   "severity": "high",
+   "where": "bin/reinstall_chrome_stable_linux.sh:39",
+   "label": "real but normal here",
+   "reason": "test-setup script that downloads Google Chrome from dl.google.com to install it"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "059c110876dd18d7",
+   "rule": "EXEC-DOWNLOAD-EXECUTABLE",
+   "severity": "high",
+   "where": "bin/reinstall_chrome_stable_mac.sh:7",
+   "label": "real but normal here",
+   "reason": "test-setup script that downloads Google Chrome from dl.google.com to install it"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "4d5bb711f13e2747",
+   "rule": "EXEC-JS-REMOTE-EXEC",
+   "severity": "critical",
+   "where": "lib/vite/traceViewer/index.D3ECYFVx.js:1",
+   "label": "wrong match",
+   "reason": "the keyword 'function' read as the Function constructor; nothing evaluates fetched text"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "d366ef2cc0fc07a9",
+   "rule": "EXEC-JS-REMOTE-EXEC",
+   "severity": "critical",
+   "where": "lib/vite/traceViewer/uiMode.CHEUJhie.js:5",
+   "label": "wrong match",
+   "reason": "the keyword 'function' read as the Function constructor; nothing evaluates fetched text"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "420cb5dd3b487a14",
+   "rule": "EXEC-LOLBIN-RUNDLL32",
+   "severity": "high",
+   "where": "lib/xdg-open:1063",
+   "label": "real but normal here",
+   "reason": "bundled xdg-open opens URLs on Windows with rundll32 url.dll,FileProtocolHandler, the standard way"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "f8ff1ef267134151",
+   "rule": "OBF-DECODE-EXEC",
+   "severity": "critical",
+   "where": "lib/vite/recorder/assets/index-BwOPSdeb.js:47",
+   "label": "wrong match",
+   "reason": "the keyword 'function' read as the Function constructor; the decoded data is not executed"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "c63f0a06db34342d",
+   "rule": "OBF-DECODE-EXEC",
+   "severity": "critical",
+   "where": "lib/vite/traceViewer/assets/defaultSettingsView-l-ymns1-.js:103",
+   "label": "wrong match",
+   "reason": "the keyword 'function' read as the Function constructor; the decoded data is not executed"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "8a263c634342e933",
+   "rule": "OBF-DECODE-EXEC",
+   "severity": "critical",
+   "where": "lib/vite/traceViewer/assets/defaultSettingsView-l-ymns1-.js:46",
+   "label": "wrong match",
+   "reason": "the keyword 'function' read as the Function constructor; the decoded data is not executed"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "97fff3e4462dbb0b",
+   "rule": "OBF-DECODE-EXEC",
+   "severity": "critical",
+   "where": "lib/vite/traceViewer/assets/defaultSettingsView-l-ymns1-.js:46",
+   "label": "wrong match",
+   "reason": "the keyword 'function' read as the Function constructor; the decoded data is not executed"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "1c81ef939bb66363",
+   "rule": "OBF-DECODE-EXEC",
+   "severity": "critical",
+   "where": "lib/vite/traceViewer/assets/defaultSettingsView-l-ymns1-.js:54",
+   "label": "wrong match",
+   "reason": "the keyword 'function' read as the Function constructor; the decoded data is not executed"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "fa74a1539e545f31",
+   "rule": "OBF-MINIFIED-CODE",
+   "severity": "high",
+   "where": "lib/utilsBundle.js:21920",
+   "label": "real but normal here",
+   "reason": "published package ships minified or generated single-line code; the description (long line, hard to review) is accurate"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "d0b5b25c5ed4b415",
+   "rule": "OBF-MINIFIED-CODE",
+   "severity": "high",
+   "where": "lib/vite/dashboard/assets/index-C_gcIYdA.js:10",
+   "label": "real but normal here",
+   "reason": "published package ships minified or generated single-line code; the description (long line, hard to review) is accurate"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "ed772b0c0f7f853b",
+   "rule": "OBF-MINIFIED-CODE",
+   "severity": "high",
+   "where": "lib/vite/htmlReport/report.js:8",
+   "label": "real but normal here",
+   "reason": "published package ships minified or generated single-line code; the description (long line, hard to review) is accurate"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "81dffe39cce91904",
+   "rule": "OBF-MINIFIED-CODE",
+   "severity": "high",
+   "where": "lib/vite/recorder/assets/index-BwOPSdeb.js:9",
+   "label": "real but normal here",
+   "reason": "published package ships minified or generated single-line code; the description (long line, hard to review) is accurate"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "2ddd09e8532310f5",
+   "rule": "OBF-MINIFIED-CODE",
+   "severity": "high",
+   "where": "lib/vite/traceViewer/assets/defaultSettingsView-l-ymns1-.js:9",
+   "label": "real but normal here",
+   "reason": "published package ships minified or generated single-line code; the description (long line, hard to review) is accurate"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "6d4ff3a01b360be9",
+   "rule": "OBF-MINIFIED-CODE",
+   "severity": "high",
+   "where": "lib/vite/traceViewer/assets/xtermModule-Cv6bi7od.js:3",
+   "label": "real but normal here",
+   "reason": "published package ships minified or generated single-line code; the description (long line, hard to review) is accurate"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "6740831a70096379",
+   "rule": "OBF-MINIFIED-CODE",
+   "severity": "high",
+   "where": "lib/vite/traceViewer/sw.bundle.js:2",
+   "label": "real but normal here",
+   "reason": "published package ships minified or generated single-line code; the description (long line, hard to review) is accurate"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "77674988d599a29a",
+   "rule": "OBF-MINIFIED-CODE",
+   "severity": "high",
+   "where": "lib/vite/traceViewer/uiMode.CHEUJhie.js:2",
+   "label": "real but normal here",
+   "reason": "published package ships minified or generated single-line code; the description (long line, hard to review) is accurate"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "3a4fb0be1db65b09",
+   "rule": "OBF-MINIFIED-CODE",
+   "severity": "high",
+   "where": "types/protocol.d.ts:15231",
+   "label": "real but normal here",
+   "reason": "published package ships minified or generated single-line code; the description (long line, hard to review) is accurate"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "c65503f48e2d728b",
+   "rule": "PERSIST-BROWSER-EXTENSION",
+   "severity": "high",
+   "where": "types/protocol.d.ts:8077",
+   "label": "real but normal here",
+   "reason": "DevTools Protocol API for loading an unpacked extension; expected in a browser-automation tool"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "a8709c4b84a67d52",
+   "rule": "PERSIST-SHELL-RC-WRITE",
+   "severity": "high",
+   "where": "bin/install_webkit_wsl.ps1:26",
+   "label": "real but normal here",
+   "reason": "WebKit-on-WSL setup script appends a PATH line to ~/.profile inside WSL"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "f79346f6feca053b",
+   "rule": "UNI-ANSI-ESCAPE",
+   "severity": "high",
+   "where": "lib/vite/traceViewer/assets/xtermModule-Cv6bi7od.js:6",
+   "label": "real but normal here",
+   "reason": "the bundled xterm.js terminal emulator builds an ANSI escape sequence for mouse reporting"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "bde39b180f2a8b8e",
+   "rule": "UNI-HOMOGLYPH-MIXED-SCRIPT",
+   "severity": "high",
+   "where": "lib/vite/dashboard/assets/index-C_gcIYdA.js:10",
+   "label": "wrong match",
+   "reason": "a code-page character table, not a disguised word"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "6e526ea5a8c7923d",
+   "rule": "UNI-HOMOGLYPH-MIXED-SCRIPT",
+   "severity": "high",
+   "where": "lib/vite/htmlReport/report.js:1",
+   "label": "wrong match",
+   "reason": "a code-page character table, not a disguised word"
+  },
+  {
+   "sample": "npm:playwright-core@1.66.0-alpha-2026-11-18",
+   "unit": "playwright-core (files outside skills)",
+   "fingerprint": "6fa0065b1400aa0d",
+   "rule": "UNI-HOMOGLYPH-MIXED-SCRIPT",
+   "severity": "high",
+   "where": "lib/vite/traceViewer/sw.bundle.js:2",
+   "label": "wrong match",
+   "reason": "a code-page character table, not a disguised word"
+  },
+  {
+   "sample": "npm:playwright@1.66.0-alpha-2026-11-18",
+   "unit": "playwright",
+   "fingerprint": "44af81e238e4fc3a",
+   "rule": "AGENT-CONFIG-WRITE",
+   "severity": "high",
+   "where": "lib/agents/generateAgents.js:152",
+   "label": "real but normal here",
+   "reason": "Playwright's agent-setup command writes .mcp.json / opencode.json when the user runs it"
+  },
+  {
+   "sample": "npm:playwright@1.66.0-alpha-2026-11-18",
+   "unit": "playwright",
+   "fingerprint": "8afb08552b508c7a",
+   "rule": "AGENT-CONFIG-WRITE",
+   "severity": "high",
+   "where": "lib/agents/generateAgents.js:60",
+   "label": "real but normal here",
+   "reason": "Playwright's agent-setup command writes .mcp.json / opencode.json when the user runs it"
+  },
+  {
+   "sample": "npm:playwright@1.66.0-alpha-2026-11-18",
+   "unit": "playwright",
+   "fingerprint": "c1d195423e992ec0",
+   "rule": "CHAIN-INSTALL-LURE",
+   "severity": "critical",
+   "where": "(skill):0",
+   "label": "wrong match",
+   "reason": "a README link whose text names another domain plus eval() in unrelated files; there is no install lure"
+  },
+  {
+   "sample": "npm:playwright@1.66.0-alpha-2026-11-18",
+   "unit": "playwright",
+   "fingerprint": "d17b32ab01e9aa94",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "lib/transform/babelBundle.js.txt:307",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright@1.66.0-alpha-2026-11-18",
+   "unit": "playwright",
+   "fingerprint": "0b3fc707c3f3b690",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "lib/transform/babelBundle.js:53922",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright@1.66.0-alpha-2026-11-18",
+   "unit": "playwright",
+   "fingerprint": "cd593f3400c0f001",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "lib/transform/babelBundle.js:53924",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright@1.66.0-alpha-2026-11-18",
+   "unit": "playwright",
+   "fingerprint": "85f3eb70b6070ecb",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "types/test.d.ts:2005",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright@1.66.0-alpha-2026-11-18",
+   "unit": "playwright",
+   "fingerprint": "85f3eb70b6070ecb",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "types/test.d.ts:686",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright@1.66.0-alpha-2026-11-18",
+   "unit": "playwright",
+   "fingerprint": "d18b2986f860056a",
+   "rule": "CRED-BROWSER",
+   "severity": "critical",
+   "where": "types/test.d.ts:8304",
+   "label": "wrong match",
+   "reason": "matches 'chromium/' in a link or comment, a browser install path or a bundled file name, not a credential or cookie store"
+  },
+  {
+   "sample": "npm:playwright@1.66.0-alpha-2026-11-18",
+   "unit": "playwright",
+   "fingerprint": "f2e794ec4366e904",
+   "rule": "OBF-MINIFIED-CODE",
+   "severity": "high",
+   "where": "lib/matchers/expect.js:5871",
+   "label": "real but normal here",
+   "reason": "published package ships minified or generated single-line code; the description (long line, hard to review) is accurate"
+  },
+  {
+   "sample": "npm:playwright@1.66.0-alpha-2026-11-18",
+   "unit": "playwright",
+   "fingerprint": "4fed46e7ec3375c0",
+   "rule": "OBF-MINIFIED-CODE",
+   "severity": "high",
+   "where": "lib/transform/babelBundle.js:50588",
+   "label": "real but normal here",
+   "reason": "published package ships minified or generated single-line code; the description (long line, hard to review) is accurate"
+  },
+  {
+   "sample": "npm:playwright@1.66.0-alpha-2026-11-18",
+   "unit": "playwright",
+   "fingerprint": "f8b10e39675af95f",
+   "rule": "OBF-MINIFIED-CODE",
+   "severity": "high",
+   "where": "lib/transform/esmLoader.js:2303",
+   "label": "real but normal here",
+   "reason": "published package ships minified or generated single-line code; the description (long line, hard to review) is accurate"
+  }
+ ]
+}
